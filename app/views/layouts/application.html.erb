@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title><%= full_title(yield(:title)) %></title>
+
+  <%= stylesheet_link_tag    "application", :media => "all" %>
+  <%= javascript_include_tag "application" %>
+  <%= csrf_meta_tags %>
+</head>
+<body>
+  <div class="navbar ">
+    <div class="navbar-inner">
+      <div class="container">
+        <%= render :partial => 'layouts/menu' %>
+      </div>
+    </div>
+  </div>
+  <div class="container">
+    <div class="content">
+      <div class="page-header">
+        <%= render 'layouts/header' %>
+      </div>
+      <div class="row">
+        <div class="span12">
+          <%= render :partial => 'layouts/flashes' %>
+          <%= yield %>
+        </div>
+      </div>
+      <footer>
+        <%= render 'layouts/footer' %>
+        <%= debug(params) if Rails.env.development? %>
+      </footer>
+    </div>
+  </div>
+</body>
+</html>

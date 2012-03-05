@@ -1,0 +1,33 @@
+<% provide(:title, ((t 'always_resolve.edit').to_s.capitalize) + ' '+ resource_name.to_s.humanize) %>
+
+<%= simple_form_for(resource, :as => resource_name, :url => registration_path(resource_name), :html => {:class => 'form-vertical',:method => :put}) do |f| %>
+  <% unless devise_error_messages!.blank? %>
+    <div class="alert alert-error">
+      <%= devise_error_messages! %>
+    </div>
+  <% end %>
+  <%= f.input :name, :label => (t 'always_resolve.firstname'), :required => true %>
+  <%= f.input :surname, :label => (t 'always_resolve.secondname'), :required => true %>
+  <%= f.input :company, :label => (t 'always_resolve.farm'), :required => false %>
+  <%= f.input :address1, :label => (t 'always_resolve.address'), :required => true %>
+  <%= f.input :address2, :label => (t 'always_resolve.address'), :required => false %>
+  <%= f.input :city, :label =>  (t 'always_resolve.city'), :required => true%>
+  <%= f.input :zip, :label => (t 'always_resolve.zip'), :required => true, :as => :integer, :maxlength => 5 %>
+  <%= f.input :state, :label => (t 'always_resolve.country') , :required => true%>
+  <%= f.input :country, :label => (t 'always_resolve.state') , :required => true%>
+  <%= f.input :vat, :label => (t 'always_resolve.vat'), :required => false %>
+  <%= f.input :fiscal_code, :label => (t 'always_resolve.cf') , :required => true%>
+  <%= f.input :telephone, :label => (t 'always_resolve.phone') , :required => false, :as => :tel%>
+  <%= f.input :fax, :label => (t 'always_resolve.fax') , :required => false, :as => :tel%>
+  <%= f.input :email, :label => (t 'always_resolve.email') , :required => true%>
+  <%= f.input :password, :label => (t 'always_resolve.password') , :required => true, :hint => (t 'always_resolve.leave_blank_if_you_dont_want_to_change_it') %>
+  <%= f.input :password_confirmation, :label => (t 'always_resolve.password_confirmation'), :required => true %>
+  <%= f.input :current_password, :label => (t 'always_resolve.current_password'), :hint => (t 'always_resolve.we_need_your_current_password_to_confirm_your_changes' ) %>
+  <div><%= f.submit (t 'always_resolve.update') %></div>
+<% end %>
+
+<h3><%= t 'always_resolve.cancel_my_account' %></h3>
+
+<p><%= t 'always_resolve.unhappy' %>? <%= link_to (t 'always_resolve.cancel_my_account'), registration_path(resource_name), :confirm =>  (t 'always_resolve.are_you_sure'), :method => :delete %>.</p>
+
+<%= link_to (t 'always_resolve.back'), :back %>

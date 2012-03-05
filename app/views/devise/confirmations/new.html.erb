@@ -1,0 +1,13 @@
+<% provide(:title, (t 'always_resolve.resend_confirmation_instructions').to_s.capitalize) %>
+
+<%= simple_form_for(resource, :as => resource_name, :url => confirmation_path(resource_name), :html => { :method => :post, :class => 'form-vertical' }) do |f| %>
+  <% unless devise_error_messages!.blank? %>
+    <div class="alert alert-error">
+      <%= devise_error_messages! %>
+    </div>
+  <% end %>
+  <%= f.input :email, :label => (t 'always_resolve.email') %>
+  <%= f.button :submit, (t 'always_resolve.resend_confirmation_instructions') %>
+<% end %>
+
+<%= render "links" %>

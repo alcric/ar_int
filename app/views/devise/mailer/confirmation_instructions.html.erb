@@ -1,0 +1,6 @@
+<% provide(:title, (t 'always_resolve.confirmation_instructions').to_s.capitalize) %>
+<p><%= t 'always_resolve.welcome' %> <%= @resource.email %>!</p>
+
+<p><%= t 'always_resolve.you_can_confirm_your_account_email_through_the_link_below' %>:</p>
+
+<p><%= link_to (t 'always_resolve.confirm_my_account' ), user_confirmation_url(@resource, :confirmation_token => @resource.confirmation_token) %></p>

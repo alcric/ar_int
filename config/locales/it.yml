@@ -1,0 +1,584 @@
+it:
+  always_resolve:
+    address: Indirizzo
+    are_you_sure: Sei sicuro?
+    back: Indietro
+    cancel_my_account: Cancella il mio account
+    cf: Codice Fiscale
+    change_my_password: Cambia la password
+    change_your_password: Cambio password
+    city: Città
+    confirm_my_account: Conferma il mio account
+    confirm_new_password: Conferma nuova password
+    confirmation_instructions: Istruzioni per la conferma
+    country: Provincia
+    current_password: Password corrente
+    didnt_receive_confirmation_instructions: Non ho ricevuto le istruzioni di conferma
+    edit: Modifica
+    edit_account: Modifica utente
+    email: Email
+    english: Inglese
+    farm: Azienda
+    fax: Fax
+    firstname: Nome
+    forgot_your_password: Password dimenticata?
+    hello: Salve
+    home: Inizio
+    if_you_didnt_request_this_please_ignore_this_email: Se non hai richiesto il cambio,
+      prego ignorare questa email
+    italian: Italiano
+    language: Lingua
+    leave_blank_if_you_dont_want_to_change_it: Lascia in bianco se non la vuoi cambiare
+    login: Entra
+    logout: Esci
+    new_password: Nuova password
+    password: Password
+    password_confirmation: Conferma password
+    phone: Telefono
+    rememberme: Ricordami
+    resend_confirmation_instructions: Reinvia istruzioni per la conferma
+    reset_password_instructions: Istruzioni per il cambio della password
+    secondname: Cognome
+    send_me_reset_password_instructions: Inviami le istruzioni per recuperare la password
+    sign_up: Nuovo Utente
+    someone_has_requested_a_link_to_change_your_password_and_you_can_do_this_through_the_link_below: Qualcuno
+      ha richiesto un link per cambiare la password, lo puoi fare attraverso il link
+      qui sotto
+    state: Stato
+    unhappy: Non soddisfatto
+    update: Aggiorna
+    vat: Partita IVA
+    we_need_your_current_password_to_confirm_your_changes: Ci serve la tua password
+      corrente per confermare i cambiamenti
+    welcome: Benvenuto
+    you_can_confirm_your_account_email_through_the_link_below: Puoi confermare la
+      tua email attraverso il link qui sotto
+    your_password_wont_change_until_you_access_the_link_above_and_create_a_new_one: La
+      tua password non verrà cambiata finchè non entrerai al link qui sopra e ne creerai
+      una di nuova
+    zip: CAP
+  countries:
+    AC: Isola di Ascensione
+    AD: Andorra
+    AE: Emirati Arabi Uniti
+    AF: Afghanistan
+    AG: Antigua e Barbuda
+    AI: Anguilla
+    AL: Albania
+    AM: Armenia
+    AN: Antille Olandesi
+    AO: Angola
+    AQ: Antartide
+    AR: Argentina
+    AS: Samoa Americane
+    AT: Austria
+    AU: Australia
+    AW: Aruba
+    AX: Isole Aland
+    AZ: Azerbaigian
+    BA: Bosnia Erzegovina
+    BB: Barbados
+    BD: Bangladesh
+    BE: Belgio
+    BF: Burkina Faso
+    BG: Bulgaria
+    BH: Bahrein
+    BI: Burundi
+    BJ: Benin
+    BL: San Bartolomeo
+    BM: Bermuda
+    BN: Brunei
+    BO: Bolivia
+    BR: Brasile
+    BS: Bahamas
+    BT: Bhutan
+    BV: Isola Bouvet
+    BW: Botswana
+    BY: Bielorussia
+    BZ: Belize
+    CA: Canada
+    CC: Isole Cocos
+    CD: Repubblica Democratica del Congo
+    CF: Repubblica Centrafricana
+    CG: Congo
+    CH: Svizzera
+    CI: Costa d’Avorio
+    CK: Isole Cook
+    CL: Cile
+    CM: Camerun
+    CN: Cina
+    CO: Colombia
+    CP: Isola di Clipperton
+    CR: Costa Rica
+    CS: Serbia e Montenegro
+    CU: Cuba
+    CV: Capo Verde
+    CX: Isola di Christmas
+    CY: Cipro
+    CZ: Repubblica Ceca
+    DE: Germania
+    DG: Diego Garcia
+    DJ: Gibuti
+    DK: Danimarca
+    DM: Dominica
+    DO: Repubblica Dominicana
+    DZ: Algeria
+    EA: Ceuta e Melilla
+    EC: Ecuador
+    EE: Estonia
+    EG: Egitto
+    EH: Sahara Occidentale
+    ER: Eritrea
+    ES: Spagna
+    ET: Etiopia
+    EU: Unione Europea
+    FI: Finlandia
+    FJ: Figi
+    FK: Isole Falkland
+    FM: Micronesia
+    FO: Isole Faroe
+    FR: Francia
+    FX: Francia metropolitanad
+    GA: Gabon
+    GB: Regno Unito
+    GD: Grenada
+    GE: Georgia
+    GF: Guiana Francese
+    GG: Guernsey
+    GH: Ghana
+    GI: Gibilterra
+    GL: Groenlandia
+    GM: Gambia
+    GN: Guinea
+    GP: Guadalupa
+    GQ: Guinea Equatoriale
+    GR: Grecia
+    GS: Georgia del Sud e Isole Sandwich del Sud
+    GT: Guatemala
+    GU: Guam
+    GW: Guinea-Bissau
+    GY: Guyana
+    HK: Regione Amministrativa Speciale di Hong Kong della Repubblica Popolare Cinese
+    HM: Isole Heard ed Isole McDonald
+    HN: Honduras
+    HR: Croazia
+    HT: Haiti
+    HU: Ungheria
+    IC: Isole Canarie
+    ID: Indonesia
+    IE: Irlanda
+    IL: Israele
+    IM: Isola di Man
+    IN: India
+    IO: Territorio Britannico dell’Oceano Indiano
+    IQ: Iraq
+    IR: Iran
+    IS: Islanda
+    IT: Italia
+    JE: Jersey
+    JM: Giamaica
+    JO: Giordania
+    JP: Giappone
+    KE: Kenya
+    KG: Kirghizistan
+    KH: Cambogia
+    KI: Kiribati
+    KM: Comore
+    KN: Saint Kitts e Nevis
+    KP: Corea del Nord
+    KR: Corea del Sud
+    KW: Kuwait
+    KY: Isole Cayman
+    KZ: Kazakistan
+    LA: Laos
+    LB: Libano
+    LC: Saint Lucia
+    LI: Liechtenstein
+    LK: Sri Lanka
+    LR: Liberia
+    LS: Lesotho
+    LT: Lituania
+    LU: Lussemburgo
+    LV: Lettonia
+    LY: Libia
+    MA: Marocco
+    MC: Monaco
+    MD: Moldavia
+    ME: Montenegro
+    MF: MF
+    MG: Madagascar
+    MH: Isole Marshall
+    MK: Repubblica di Macedonia
+    ML: Mali
+    MM: Myanmar
+    MN: Mongolia
+    MO: Regione Amministrativa Speciale di Macao della Repubblica Popolare Cinese
+    MP: Isole Marianne Settentrionali
+    MQ: Martinica
+    MR: Mauritania
+    MS: Montserrat
+    MT: Malta
+    MU: Mauritius
+    MV: Maldive
+    MW: Malawi
+    MX: Messico
+    MY: Malesia
+    MZ: Mozambico
+    NA: Namibia
+    NC: Nuova Caledonia
+    NE: Niger
+    NF: Isola Norfolk
+    NG: Nigeria
+    NI: Nicaragua
+    NL: Paesi Bassi
+    'NO': Norvegia
+    NP: Nepal
+    NR: Nauru
+    NU: Niue
+    NZ: Nuova Zelanda
+    OM: Oman
+    PA: Panama
+    PE: Perù
+    PF: Polinesia Francese
+    PG: Papua Nuova Guinea
+    PH: Filippine
+    PK: Pakistan
+    PL: Polonia
+    PM: Saint Pierre e Miquelon
+    PN: Pitcairn
+    PR: Portorico
+    PS: Territori palestinesi
+    PT: Portogallo
+    PW: Palau
+    PY: Paraguay
+    QA: Qatar
+    QO: Oceania lontanaR087
+    RE: Réunion
+    RO: Romania
+    RS: Serbia
+    RU: Federazione Russa
+    RW: Ruanda
+    SA: Arabia Saudita
+    SB: Isole Solomon
+    SC: Seychelles
+    SD: Sudan
+    SE: Svezia
+    SG: Singapore
+    SH: Sant’Elena
+    SI: Slovenia
+    SJ: Svalbard e Jan Mayen
+    SK: Slovacchia
+    SL: Sierra Leone
+    SM: San Marino
+    SN: Senegal
+    SO: Somalia
+    SR: Suriname
+    ST: Sao Tomé e Príncipe
+    SV: El Salvador
+    SY: Siria
+    SZ: Swaziland
+    TA: Tristan da Cunha
+    TC: Isole Turks e Caicos
+    TD: Ciad
+    TF: Territori australi francesi
+    TG: Togo
+    TH: Tailandia
+    TJ: Tagikistan
+    TK: Tokelau
+    TL: Timor Est
+    TM: Turkmenistan
+    TN: Tunisia
+    TO: Tonga
+    TR: Turchia
+    TT: Trinidad e Tobago
+    TV: Tuvalu
+    TW: Taiwan
+    TZ: Tanzania
+    UA: Ucraina
+    UG: Uganda
+    UM: Isole Minori lontane dagli Stati Uniti
+    US: Stati Uniti
+    UY: Uruguay
+    UZ: Uzbekistan
+    VA: Vaticano
+    VC: Saint Vincent e Grenadines
+    VE: Venezuela
+    VG: Isole Vergini Britanniche
+    VI: Isole Vergini Americane
+    VN: Vietnam
+    VU: Vanuatu
+    WF: Wallis e Futuna
+    WS: Samoa
+    YE: Yemen
+    YT: Mayotte
+    ZA: Sudafrica
+    ZM: Zambia
+    ZW: Zimbabwe
+    ZZ: regione non valida o sconosciuta
+  date:
+    abbr_day_names:
+    - Dom
+    - Lun
+    - Mar
+    - Mer
+    - Gio
+    - Ven
+    - Sab
+    abbr_month_names:
+    - 
+    - Gen
+    - Feb
+    - Mar
+    - Apr
+    - Mag
+    - Giu
+    - Lug
+    - Ago
+    - Set
+    - Ott
+    - Nov
+    - Dic
+    day_names:
+    - Domenica
+    - Lunedì
+    - Martedì
+    - Mercoledì
+    - Giovedì
+    - Venerdì
+    - Sabato
+    formats:
+      default: ! '%d-%m-%Y'
+      long: ! '%d %B %Y'
+      short: ! '%d %b'
+    month_names:
+    - 
+    - Gennaio
+    - Febbraio
+    - Marzo
+    - Aprile
+    - Maggio
+    - Giugno
+    - Luglio
+    - Agosto
+    - Settembre
+    - Ottobre
+    - Novembre
+    - Dicembre
+    order:
+    - :day
+    - :month
+    - :year
+  datetime:
+    distance_in_words:
+      about_x_hours:
+        one: circa un'ora
+        other: circa %{count} ore
+      about_x_months:
+        one: circa un mese
+        other: circa %{count} mesi
+      about_x_years:
+        one: circa un anno
+        other: circa %{count} anni
+      almost_x_years:
+        one: circa 1 anno
+        other: circa %{count} anni
+      half_a_minute: mezzo minuto
+      less_than_x_minutes:
+        one: meno di un minuto
+        other: meno di %{count} minuti
+      less_than_x_seconds:
+        one: meno di un secondo
+        other: meno di %{count} secondi
+      over_x_years:
+        one: oltre un anno
+        other: oltre %{count} anni
+      x_days:
+        one: 1 giorno
+        other: ! '%{count} giorni'
+      x_minutes:
+        one: 1 minuto
+        other: ! '%{count} minuti'
+      x_months:
+        one: 1 mese
+        other: ! '%{count} mesi'
+      x_seconds:
+        one: 1 secondo
+        other: ! '%{count} secondi'
+    prompts:
+      day: Giorno
+      hour: Ora
+      minute: Minuto
+      month: Mese
+      second: Secondi
+      year: Anno
+  devise:
+    confirmations:
+      confirmed: Il tuo account è stato correttamente confermato. Ora sei collegato.
+      send_instructions: Riceverai un messaggio email con le istruzioni per confermare
+        il tuo account entro qualche minuto.
+      send_paranoid_instructions: Se la tua e-mail esiste nel nostro database, riceverai
+        un messaggio email con le istruzioni per confermare il tuo account entro qualche
+        minuto.
+    failure:
+      already_authenticated: Hai già effettuato l'accesso.
+      inactive: Il tuo account non è stato ancora attivato.
+      invalid: Indirizzo email o password non validi.
+      invalid_token: Codice di autenticazione non valido.
+      locked: Il tuo account è bloccato.
+      timeout: Sessione scaduta, accedere nuovamente per continuare.
+      unauthenticated: Devi accedere o registrarti per continuare.
+      unconfirmed: Devi confermare il tuo account per continuare.
+    mailer:
+      confirmation_instructions:
+        subject: Istruzioni per la conferma
+      reset_password_instructions:
+        subject: Istruzioni per reimpostare la password
+      unlock_instructions:
+        subject: Istruzioni per sbloccare l'account
+    omniauth_callbacks:
+      failure: Non è stato possibile autorizzarti da %{kind} perchè "%{reason}".
+      success: Autorizzato con successo dall'account %{kind}.
+    passwords:
+      send_instructions: Riceverai un messaggio email con le istruzioni per reimpostare
+        la tua password entro qualche minuto.
+      send_paranoid_instructions: Se la tua e-mail esiste nel nostro database, riceverai
+        un messaggio email contentente un link per il ripristino della password
+      updated: La tua password è stata cambiata. Ora sei collegato.
+      updated_not_active: La tua password è stata cambiata.
+    registrations:
+      destroyed: Arrivederci! L'account è stato cancellato. Speriamo di rivederci
+        presto.
+      signed_up: Iscrizione eseguita correttamente. Se abilitata, una conferma è stata
+        inviata al tuo indirizzo email.
+      signed_up_but_inactive: Iscrizione eseguita correttamente. Però non puoi accedere
+        in quanto il tuo account non è ancora attivo.
+      signed_up_but_locked: Iscrizione eseguita correttamente. Però non puoi accedere
+        in quanto il tuo account è bloccato.
+      signed_up_but_unconfirmed: Ti è stato inviato un messaggio con un link di conferma.
+        Ti invitiamo a visitare il link per attivare il tuo account.
+      update_needs_confirmation: Il tuo account è stato aggiornato, ma dobbiamo verificare
+        la tua email. Ti invitiamo a consultare la tua email e cliccare sul link di
+        conferma.
+      updated: Il tuo account è stato aggiornato.
+    sessions:
+      signed_in: Accesso effettuato con successo.
+      signed_out: Sei uscito correttamente.
+    unlocks:
+      send_instructions: Riceverai un messaggio email con le istruzioni per sbloccare
+        il tuo account entro qualche minuto.
+      send_paranoid_instructions: Se la tua e-mail esiste nel nostro database, riceverai
+        un messaggio email con le istruzioni per sbloccare il tuo account entro qualche
+        minuto.
+      unlocked: Il tuo account è stato correttamente sbloccato. Ora sei collegato.
+  errors:
+    format: ! '%{attribute} %{message}'
+    messages:
+      accepted: deve essere accettata
+      already_confirmed: è stato già confermato
+      blank: non può essere lasciato in bianco
+      confirmation: non coincide con la conferma
+      empty: non può essere vuoto
+      equal_to: deve essere uguale a %{count}
+      even: deve essere pari
+      exclusion: è riservato
+      expired: è scaduto, si prega di richiederne uno nuovo
+      greater_than: deve essere superiore a %{count}
+      greater_than_or_equal_to: deve essere superiore o uguale a %{count}
+      inclusion: non è incluso nella lista
+      invalid: non è valido
+      less_than: deve essere meno di %{count}
+      less_than_or_equal_to: deve essere meno o uguale a %{count}
+      not_a_number: non è un numero
+      not_an_integer: non è un intero
+      not_found: non trovato
+      not_locked: non era bloccato
+      not_saved:
+        one: ! 'Non posso salvare questo %{resource}: 1 errore'
+        other: ! 'Non posso salvare questo %{resource}: %{count} errori.'
+      odd: deve essere dispari
+      record_invalid: ! 'Validazione fallita: %{errors}'
+      taken: è già in uso
+      too_long:
+        one: è troppo lungo (il massimo è 1 carattere)
+        other: è troppo lungo (il massimo è %{count} caratteri)
+      too_short:
+        one: è troppo corto (il minimo è 1 carattere)
+        other: è troppo corto (il minimo è %{count} caratteri)
+      wrong_length:
+        one: è della lunghezza sbagliata (deve essere di 1 carattere)
+        other: è della lunghezza sbagliata (deve essere di %{count} caratteri)
+    template:
+      body: ! 'Per favore ricontrolla i seguenti campi:'
+      header:
+        one: ! 'Non posso salvare questo %{model}: 1 errore'
+        other: ! 'Non posso salvare questo %{model}: %{count} errori.'
+  helpers:
+    select:
+      prompt: Per favore, seleziona
+    submit:
+      create: Crea %{model}
+      submit: Invia %{model}
+      update: Aggiorna %{model}
+  number:
+    currency:
+      format:
+        delimiter: ! ','
+        format: ! '%n %u'
+        precision: 2
+        separator: .
+        significant: false
+        strip_insignificant_zeros: false
+        unit: €
+    format:
+      delimiter: ! ','
+      precision: 2
+      separator: .
+      significant: false
+      strip_insignificant_zeros: false
+    human:
+      decimal_units:
+        format: ! '%n %u'
+        units:
+          billion: Miliardi
+          million: Milioni
+          quadrillion: Biliardi
+          thousand: Mila
+          trillion: Bilioni
+          unit: ''
+      format:
+        delimiter: ''
+        precision: 1
+        significant: true
+        strip_insignificant_zeros: true
+      storage_units:
+        format: ! '%n %u'
+        units:
+          byte:
+            one: Byte
+            other: Byte
+          gb: GB
+          kb: KB
+          mb: MB
+          tb: TB
+    percentage:
+      format:
+        delimiter: ''
+    precision:
+      format:
+        delimiter: ''
+  support:
+    array:
+      last_word_connector: ! ' e '
+      two_words_connector: ! ' e '
+      words_connector: ! ', '
+  time:
+    am: am
+    formats:
+      default: ! '%a %d %b %Y, %H:%M:%S %z'
+      long: ! '%d %B %Y %H:%M'
+      short: ! '%d %b %H:%M'
+    pm: pm
+  will_paginate:
+    next_label: successivo →
+    page_gap: ! '&hellip;'
+    previous_label: ← precedente

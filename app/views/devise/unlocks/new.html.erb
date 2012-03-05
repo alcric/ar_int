@@ -1,0 +1,16 @@
+<% provide(:title, (t 'always_resolve.resend_unlock_instructions').to_s.capitalize) %>
+
+<%= form_for(resource, :as => resource_name, :url => unlock_path(resource_name), :html => { :method => :post }) do |f| %>
+  <% unless devise_error_messages!.blank? %>
+    <div class="alert alert-error">
+      <%= devise_error_messages! %>
+    </div>
+  <% end %>
+
+  <div><%= f.label :email %><br />
+  <%= f.email_field :email %></div>
+
+  <div><%= f.submit (t 'always_resolve.resend_unlock_instructions') %></div>
+<% end %>
+
+<%= render "links" %>

@@ -1,0 +1,40 @@
+<ul class="nav">
+  <li>
+    <%= link_to((t 'always_resolve.home'), root_path) %>
+  </li>
+
+  <li class="dropdown">
+    <a href="#" class="dropdown-toggle"  data-toggle="dropdown">
+      <%= t 'always_resolve.language'%>
+      <b class="caret"></b>
+    </a>
+    <ul class="dropdown-menu">
+      <li>
+        <%= link_to((t 'always_resolve.english'), "http://en.alwaysresolve.com:3000#{request.env['REQUEST_PATH']}") %>
+      </li>
+      <li>
+        <%= link_to((t 'always_resolve.italian'), "http://it.alwaysresolve.com:3000#{request.env['REQUEST_PATH']}") %>
+      </li>
+    </ul>
+  </li>
+
+  <% if user_signed_in? %>
+    <li>
+    <%= link_to((t 'always_resolve.edit_account'), edit_user_registration_path) %>
+    </li>
+  <% else %>
+    <li>
+    <%= link_to((t 'always_resolve.sign_up'), new_user_registration_path)  %>
+    </li>
+  <% end %>
+
+  <% if user_signed_in? %>
+    <li>
+    <%= link_to((t 'always_resolve.logout'), destroy_user_session_path, :method=>'delete') %>
+    </li>
+  <% else %>
+    <li>
+    <%= link_to((t 'always_resolve.login'), new_user_session_path)  %>
+    </li>
+  <% end %>
+</ul>
