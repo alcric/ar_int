@@ -1,10 +1,25 @@
 <ul class="nav">
   <li>
-    <%= link_to((t 'always_resolve.home'), root_path) %>
+    <%= link_to (root_path) do %>
+      <i class="icon-home icon-white"></i> <%= t 'always_resolve.home'  %>
+    <% end  %>
+  </li>
+
+  <li>
+    <%= link_to (services_path) do %>
+      <i class="icon-leaf icon-white"></i> <%= t 'always_resolve.services'  %>
+    <% end  %>
+  </li>
+
+  <li>
+    <%= link_to (aboutus_path) do %>
+      <i class="icon-question-sign icon-white"></i> <%= t 'always_resolve.aboutus'  %>
+    <% end  %>
   </li>
 
   <li class="dropdown">
     <a href="#" class="dropdown-toggle"  data-toggle="dropdown">
+      <i class="icon-flag icon-white"></i>
       <%= t 'always_resolve.language'%>
       <b class="caret"></b>
     </a>
@@ -20,21 +35,39 @@
 
   <% if user_signed_in? %>
     <li>
-    <%= link_to((t 'always_resolve.edit_account'), edit_user_registration_path) %>
+      <%= link_to(edit_user_registration_path) do %>
+        <i class="icon-cog icon-white"></i> <%= t 'always_resolve.edit_account'  %>
+      <% end  %>
     </li>
   <% else %>
     <li>
-    <%= link_to((t 'always_resolve.sign_up'), new_user_registration_path)  %>
+      <%= link_to(new_user_registration_path)  do%>
+        <i class="icon-plus-sign icon-white"></i> <%= t 'always_resolve.sign_up'  %>
+      <% end  %>
     </li>
   <% end %>
 
   <% if user_signed_in? %>
     <li>
-    <%= link_to((t 'always_resolve.logout'), destroy_user_session_path, :method=>'delete') %>
+      <%= link_to(destroy_user_session_path, :method=>'delete') do %>
+        <i class="icon-off icon-white"></i> <%= t 'always_resolve.logout'  %>
+      <% end  %>
     </li>
   <% else %>
     <li>
-    <%= link_to((t 'always_resolve.login'), new_user_session_path)  %>
+    <%= link_to(new_user_session_path) do %>
+      <i class="icon-ok-sign icon-white"></i> <%= t 'always_resolve.login'  %>
+    <% end  %>
     </li>
   <% end %>
 </ul>
+<% if user_signed_in? %>
+<ul class="nav pull-right">
+  <li class="active">
+    <a class="brand" href="#">
+      <%= gravatar_image_tag(current_user.email, :alt => "#{current_user.name} #{current_user.surname}", :class => "gravatar", :gravatar => { :size => 30 }) %>
+      <i><%= t 'always_resolve.hello' %>, <%= current_user.name %></i>
+    </a>
+  </li>
+</ul>
+<% end %>

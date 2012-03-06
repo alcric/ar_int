@@ -1,0 +1,29 @@
+<% provide(:title, ((t 'always_resolve.edit').to_s.capitalize) + ' '+ @user.email) %>
+
+<%= simple_form_for(@user, :html => {:class => 'form-vertical',:method => :put}) do |f| %>
+<%  #:as => resource_name, :url => registration_path(resource_name), %>
+  <% if @user.errors.any? %>
+    <div class="alert alert-error">
+        <ul>
+          <% @user.errors.full_messages.each do |msg| %>
+            <li><%= msg %></li>
+          <% end %>
+        </ul>
+    </div>
+  <% end %>
+  <%= f.input :name, :label => (t 'always_resolve.firstname'), :required => true %>
+  <%= f.input :surname, :label => (t 'always_resolve.secondname'), :required => true %>
+  <%= f.input :company, :label => (t 'always_resolve.farm'), :required => false %>
+  <%= f.input :address1, :label => (t 'always_resolve.address'), :required => true %>
+  <%= f.input :address2, :label => (t 'always_resolve.address'), :required => false %>
+  <%= f.input :city, :label =>  (t 'always_resolve.city'), :required => true%>
+  <%= f.input :zip, :label => (t 'always_resolve.zip'), :required => true, :as => :integer, :maxlength => 5 %>
+  <%= f.input :state, :label => (t 'always_resolve.country') , :required => true%>
+  <%= f.input :country, :label => (t 'always_resolve.state') , :required => true%>
+  <%= f.input :vat, :label => (t 'always_resolve.vat'), :required => false %>
+  <%= f.input :fiscal_code, :label => (t 'always_resolve.cf') , :required => true%>
+  <%= f.input :telephone, :label => (t 'always_resolve.phone') , :required => false, :as => :tel%>
+  <%= f.input :fax, :label => (t 'always_resolve.fax') , :required => false, :as => :tel%>
+  <%= f.input :email, :label => (t 'always_resolve.email') , :required => true%>
+  <div><%= f.submit (t 'always_resolve.update') %></div>
+<% end %>

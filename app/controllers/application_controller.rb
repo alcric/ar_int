@@ -2,6 +2,10 @@ class ApplicationController < ActionController::Base
   protect_from_forgery
   before_filter :set_locale
 
+  handles_sortable_columns do |conf|
+    conf.sort_param = "sort_by"
+  end
+
   def set_locale
     locale = extract_locale_from_subdomain || 'en'
     if locale == 'en'

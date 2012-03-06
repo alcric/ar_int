@@ -1,9 +1,23 @@
 <table>
   <tr>
-    <th>key</th>
-    <th>value</th>
+    <td>
+      <img src="leaf.jpg" alt="Always Resolve" align="top">
+    </td>
+    <td>
+      <% if user_signed_in? %>
+        In questo momento sono attivi X domini, con Y servizi associati
+      <% else %>
+        <blockquote class="pull-right">
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer posuere erat a ante venenatis.</p>
+        <small>Someone famous</small>
+        </blockquote>
+        <br>
+        <div align="center">
+          <%= link_to(new_user_registration_path, :class => "btn-primary btn-large") do%>
+            <i class="icon-plus-sign icon-white"></i> <%= t 'always_resolve.sign_up' %>
+          <% end %>
+        </div>
+      <% end %>
+    </td>
   </tr>
-  <% for item in request.env %>
-    <tr><td><%= item[0] %></td><td><%= item[1] %></td></tr>
-  <% end %>
 </table>

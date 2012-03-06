@@ -32,9 +32,13 @@ gem 'devise-i18n'
 
 gem 'activemerchant', :require => 'active_merchant'
 
+gem 'kaminari'
+gem 'gravatar_image_tag'
+
 gem 'i18n'
 gem 'localeapp'
 gem 'country_select'
 gem 'simple_form'
 gem 'show_for'
 gem 'twitter-bootstrap-rails'
+gem 'handles_sortable_columns'

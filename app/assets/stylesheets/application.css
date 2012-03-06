@@ -14,3 +14,10 @@
 /*
 *= require bootstrap_and_overrides
 */
+
+img.gravatar {
+    border: 1px solid #999;
+    margin-top: -5px;
+    margin-bottom: -5px;
+    vertical-align: top;
+}

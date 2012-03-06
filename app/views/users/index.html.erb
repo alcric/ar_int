@@ -1,0 +1,37 @@
+<% provide(:title, (t 'always_resolve.users').to_s.capitalize) %>
+<%= paginate @users %>
+
+<table class="table table-striped" >
+  <thead>
+  <tr>
+    <th><%= sortable_column (t 'always_resolve.firstname'), :column => "name" %></th>
+    <th><%= sortable_column (t 'always_resolve.secondname'), :column => "surname" %></th>
+    <th><%= sortable_column (t 'always_resolve.email'), :column => "email" %></th>
+    <th><%= t 'always_resolve.actions' %></th>
+  </tr>
+  </thead>
+  <tbody>
+  <% @users.each do |user| %>
+  <tr>
+    <td><%= user.name %></td>
+    <td><%= user.surname %></td>
+    <td><%= user.email %></td>
+    <td>
+      <%= link_to user, :title => "#{t 'always_resolve.show'}" do%>
+        <i class="icon-eye-open"></i>
+      <% end %>
+      <%= link_to edit_user_path(user), :title => "#{t 'always_resolve.edit'}" do%>
+      <i class="icon-pencil"></i>
+      <% end %>
+      <% if user.email != current_user.email%>
+        <%= link_to user, :confirm => "#{t 'always_resolve.are_you_sure'}", :method => :delete, :title => "#{t 'always_resolve.delete'}" do%>
+          <i class="icon-trash"></i>
+        <% end %>
+      <% end %>
+    </td>
+  </tr>
+  <% end %>
+  </tbody>
+</table>
+
+<%= paginate @users %>

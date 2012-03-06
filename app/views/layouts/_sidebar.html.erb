@@ -1,0 +1,37 @@
+<% if user_signed_in? %>
+  <div class="well" style="padding: 8px 0;">
+    <% if current_user.admin? %>
+      <ul class="nav nav-list">
+        <li class="nav-header">
+          <%= t 'always_resolve.admin_menu' %>
+        </li>
+        <li>
+          <%= link_to(users_path) do %>
+            <i class="icon-user"></i> <%= t 'always_resolve.show_users' %>
+          <% end %>
+        </li>
+        <li>
+          <a href="#"><i class="icon-leaf"></i> <%= t 'always_resolve.show_services' %></a>
+        </li>
+        <li>
+          <a href="#"><i class="icon-star"></i> <%= t 'always_resolve.show_domains' %></a>
+        </li>
+      </ul>
+    <% else %>
+      <ul class="nav nav-list">
+        <li class="nav-header">
+          <%= t 'always_resolve.user_menu' %>
+        </li>
+        <li>
+          <a href="#"><i class="icon-leaf"></i> <%= t 'always_resolve.show_services' %></a>
+        </li>
+        <li>
+          <a href="#"><i class="icon-star"></i> <%= t 'always_resolve.show_domains' %></a>
+        </li>
+        <li>
+          <a href="#"><i class="icon-shopping-cart"></i><%= t 'always_resolve.buy_service' %></a>
+        </li>
+      </ul>
+    <% end %>
+  </div>
+<% end %>

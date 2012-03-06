@@ -57,6 +57,21 @@ it:
       tua password non verrà cambiata finchè non entrerai al link qui sopra e ne creerai
       una di nuova
     zip: CAP
+    admin_menu: Menu admin
+    buy_service: Compra un servizio
+    show_domains: Elenco domini
+    show_services: Elenco servizi
+    show_users: Elenco utenti
+    user_menu: Menu utente
+    aboutus: Chi siamo
+    services: Servizi
+    actions: Azioni
+    users: Utenti
+    show: Dettagli
+    delete: Cancella
+    details: Dettagli
+    last_login: Ultimo Accesso
+    user_was_successfully_updated: Utente aggiornato
   countries:
     AC: Isola di Ascensione
     AD: Andorra
@@ -315,6 +330,21 @@ it:
     ZM: Zambia
     ZW: Zimbabwe
     ZZ: regione non valida o sconosciuta
+    BQ: BQ
+    CT: CT
+    DD: DD
+    FQ: FQ
+    JT: JT
+    MI: MI
+    NQ: NQ
+    NT: NT
+    PC: PC
+    PU: PU
+    PZ: PZ
+    SU: SU
+    VD: VD
+    WK: WK
+    YD: Yemen
   date:
     abbr_day_names:
     - Dom
@@ -325,7 +355,7 @@ it:
     - Ven
     - Sab
     abbr_month_names:
-    - 
+    - !!null 
     - Gen
     - Feb
     - Mar
@@ -351,7 +381,7 @@ it:
       long: ! '%d %B %Y'
       short: ! '%d %b'
     month_names:
-    - 
+    - !!null 
     - Gennaio
     - Febbraio
     - Marzo
@@ -578,7 +608,9 @@ it:
       long: ! '%d %B %Y %H:%M'
       short: ! '%d %b %H:%M'
     pm: pm
-  will_paginate:
-    next_label: successivo →
-    page_gap: ! '&hellip;'
-    previous_label: ← precedente
+  views:
+    pagination:
+      first: Inizio
+      last: Fine
+      next: Prossimo
+      previous: Precedente

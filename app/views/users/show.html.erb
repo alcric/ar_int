@@ -1,2 +1,131 @@
-<h1>Users#show</h1>
-<p>Find me in app/views/users/show.html.erb</p>
+<% provide(:title, (t 'always_resolve.details').to_s.capitalize) %>
+<% # Tabella con i dettagli dell'utente' %>
+<table class="table">
+  <tr>
+    <td>
+      <%=  gravatar_image_tag(@user.email, :alt => "#{@user.name} #{@user.surname}") %>
+    </td>
+    <td>
+      <table class="table-striped">
+        <tr>
+          <td><b><%= t 'always_resolve.firstname' %></b></td>
+          <td><%= @user.name %></td>
+          <td><b><%= t 'always_resolve.secondname' %></b></td>
+          <td><%= @user.surname %></td>
+        </tr>
+        <tr>
+          <td><b><%= t 'always_resolve.address' %> 1</b></td>
+          <td><%= @user.address1 %></td>
+          <td><b><%= t 'always_resolve.address' %> 2</b></td>
+          <td><%= @user.address2 %></td>
+        </tr>
+        <tr>
+          <td><b><%= t 'always_resolve.zip' %></b></td>
+          <td><%= @user.zip %></td>
+          <td><b><%= t 'always_resolve.city' %></b></td>
+          <td><%= @user.city %></td>
+        </tr>
+        <tr>
+          <td><b><%= t 'always_resolve.state' %></b></td>
+          <td><%= @user.state %></td>
+          <td><b><%= t 'always_resolve.country' %></b></td>
+          <td><%= @user.country %></td>
+        </tr>
+        <tr>
+          <td><b><%= t 'always_resolve.phone' %></b></td>
+          <td><%= @user.telephone %></td>
+          <td><b><%= t 'always_resolve.fax' %></b></td>
+          <td><%= @user.fax %></td>
+        </tr>
+        <tr>
+          <td><b><%= t 'always_resolve.email' %></b></td>
+          <td><%= @user.email %></td>
+          <td><b><%= t 'always_resolve.last_login' %></b></td>
+          <td><%= @user.last_sign_in_at %></td>
+        </tr>
+        <tr>
+          <td><b><%= t 'always_resolve.cf' %></b></td>
+          <td><%= @user.fiscal_code %></td>
+          <td><b><%= t 'always_resolve.vat' %></b></td>
+          <td><%= @user.vat %></td>
+        </tr>
+      </table>
+    </td>
+  </tr>
+  <tr>
+    <td colspan="2">
+      <h2>Servizi</h2>
+    </td>
+  </tr>
+  <tr>
+    <td colspan="2">
+      <% # paginate @user %>
+      <table class="table-striped">
+        <thead>
+          <tr>
+            <th><%= sortable_column (t 'always_resolve.firstname'), :column => "name" %></th>
+            <th><%= sortable_column (t 'always_resolve.firstname'), :column => "name" %></th>
+            <th><%= sortable_column (t 'always_resolve.firstname'), :column => "name" %></th>
+            <th><%= t 'always_resolve.actions' %></th>
+          </tr>
+        </thead>
+        <tbody>
+        <tr>
+          <td>1</td>
+          <td>2</td>
+          <td>3</td>
+          <td>
+            <% # link_to user, :title => "#{t 'always_resolve.show'}" do%>
+              <i class="icon-eye-open"></i>
+            <% # end %>
+            <% # link_to user, :title => "#{t 'always_resolve.edit'}" do%>
+            <i class="icon-pencil"></i>
+            <% #end %>
+            <% # link_to user, :title => "#{t 'always_resolve.delete'}" do%>
+              <i class="icon-trash"></i>
+            <% #end %>
+          </td>
+        </tr>
+        </tbody>
+      </table>
+    </td>
+  </tr>
+  <tr>
+    <td colspan="2">
+      <h2>Domini</h2>
+    </td>
+  </tr>
+  <tr>
+    <td colspan="2">
+      <% # paginate @user %>
+      <table class="table-striped">
+        <thead>
+          <tr>
+            <th><%= sortable_column (t 'always_resolve.firstname'), :column => "name" %></th>
+            <th><%= sortable_column (t 'always_resolve.firstname'), :column => "name" %></th>
+            <th><%= sortable_column (t 'always_resolve.firstname'), :column => "name" %></th>
+            <th><%= t 'always_resolve.actions' %></th>
+          </tr>
+        </thead>
+        <tbody>
+        <tr>
+          <td>1</td>
+          <td>2</td>
+          <td>3</td>
+          <td>
+            <% # link_to user, :title => "#{t 'always_resolve.show'}" do%>
+              <i class="icon-eye-open"></i>
+            <% #end %>
+            <% # link_to user, :title => "#{t 'always_resolve.edit'}" do%>
+            <i class="icon-pencil"></i>
+            <% #end %>
+            <% # link_to user, :title => "#{t 'always_resolve.delete'}" do%>
+              <i class="icon-trash"></i>
+            <% #end %>
+          </td>
+        </tr>
+        </tbody>
+      </table>
+    </td>
+  </tr>
+</table>
