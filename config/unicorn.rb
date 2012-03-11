@@ -18,8 +18,8 @@ listen "/var/www/alwaysresolve.net/shared/tmp/unicorn.sock", :backlog => 64
 pid "/var/www/alwaysresolve.net/shared/tmp/pids/unicorn.pid"
 
 # Set the path of the log files inside the log folder of the testapp
-stderr_path "/var/www/alwaysresolve.net/current/shared/log/unicorn.stderr.log"
-stdout_path "/var/www/alwaysresolve.net/current/shared/log/unicorn.stdout.log"
+stderr_path "/var/www/alwaysresolve.net/shared/log/unicorn.stderr.log"
+stdout_path "/var/www/alwaysresolve.net/shared/log/unicorn.stdout.log"
 
 # Production specific settings
 if env == "production"
