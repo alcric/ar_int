@@ -99,7 +99,7 @@ namespace :deploy do
 
   desc "Zero-downtime restart of Unicorn"
   task :restart, :except => { :no_release => true } do
-    run "kill -s USR2 `cat /tmp/unicorn.my_site.pid`"
+    run "kill -s USR2 `cat /var/www/alwaysresolve.net/current/tmp/pids/unicorn.pid`"
   end
 
   desc "Start unicorn"
@@ -109,7 +109,7 @@ namespace :deploy do
 
   desc "Stop unicorn"
   task :stop, :except => { :no_release => true } do
-    run "kill -s QUIT `cat /tmp/unicorn.my_site.pid`"
+    run "kill -s QUIT `cat /var/www/alwaysresolve.net/current/tmp/pids/unicorn.pid`"
   end
 
   namespace :rollback do
