@@ -29,7 +29,7 @@ AlwaysResolve::Application.configure do
   # Expands the lines which load the assets
   config.assets.debug = true
   # ActionMailer Config
-  config.action_mailer.default_url_options = { :host => 'www.alwaysresolve.com:3000' }
+  config.action_mailer.default_url_options = { :host => 'www.alwaysresolve.it:3000' }
   # A dummy setup for development - no deliveries, but logged
   config.action_mailer.delivery_method = :smtp
   config.action_mailer.perform_deliveries = false
