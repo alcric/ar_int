@@ -31,8 +31,8 @@ if env == "production"
   user 'deploy', 'deploy'
   shared_path = "/var/www/alwaysresolve.net/shared"
 
-  stderr_path "#{shared_path}/log/unicorn.stderr.log"
-  stdout_path "#{shared_path}/log/unicorn.stdout.log"
+  stderr_path "#{shared_path}/log/unicorn.stderr.prod.log"
+  stdout_path "#{shared_path}/log/unicorn.stdout.prod.log"
 end
 
 before_fork do |server, worker|
