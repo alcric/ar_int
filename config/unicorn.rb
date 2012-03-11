@@ -13,13 +13,13 @@ timeout 30
 
 # This is where we specify the socket.
 # We will point the upstream Nginx module to this socket later on
-listen "/var/www/alwaysresolve.net/current/tmp/sockets/unicorn.sock", :backlog => 64
+listen "/var/www/alwaysresolve.net/shared/tmp/sockets/unicorn.sock", :backlog => 64
 
-pid "/var/www/alwaysresolve.net/current/tmp/pids/unicorn.pid"
+pid "/var/www/alwaysresolve.net/shared/tmp/pids/unicorn.pid"
 
 # Set the path of the log files inside the log folder of the testapp
-stderr_path "/var/www/alwaysresolve.net/current/log/unicorn.stderr.log"
-stdout_path "/var/www/alwaysresolve.net/current/log/unicorn.stdout.log"
+stderr_path "/var/www/alwaysresolve.net/current/shared/log/unicorn.stderr.log"
+stdout_path "/var/www/alwaysresolve.net/current/shared/log/unicorn.stdout.log"
 
 # Production specific settings
 if env == "production"
