@@ -29,7 +29,7 @@ if env == "production"
 
   # feel free to point this anywhere accessible on the filesystem
   user 'deploy', 'staff'
-  shared_path = "/var/www/alwaysresolve.net/shared"
+  shared_path = "/var/www/alwaysresolve.net/"
 
   stderr_path "#{shared_path}/log/unicorn.stderr.log"
   stdout_path "#{shared_path}/log/unicorn.stdout.log"
