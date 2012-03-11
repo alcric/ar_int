@@ -25,7 +25,7 @@ set(:current_revision)  { capture("cd #{current_path}; git rev-parse --short HEA
 set(:latest_revision)   { capture("cd #{current_path}; git rev-parse --short HEAD").strip }
 set(:previous_revision) { capture("cd #{current_path}; git rev-parse --short HEAD@{1}").strip }
 
-default_environment["RAILS_ENV"] = 'production'
+default_environment["RAILS_ENV"] = 'development'
 
 default_environment["PATH"]         = "/usr/local/rvm/gems/ruby-1.9.3-p125/bin:/usr/local/rvm/gems/ruby-1.9.3-p125@global/bin:/usr/local/rvm/rubies/ruby-1.9.3-p125/bin:/usr/local/rvm/bin:/usr/local/bin:/usr/bin:/bin:/usr/local/games:/usr/games"
 default_environment["GEM_HOME"]     = "/usr/local/rvm/gems/ruby-1.9.3-p125"
@@ -99,7 +99,7 @@ namespace :deploy do
 
   desc "Zero-downtime restart of Unicorn"
   task :restart, :except => { :no_release => true } do
-    run "kill -s USR2 `cat /var/www/alwaysresolve.net/current/tmp/pids/unicorn.pid`"
+    run "kill -s USR2 `cat /var/www/alwaysresolve.net/shared/tmp/pids/unicorn.pid`"
   end
 
   desc "Start unicorn"
@@ -109,7 +109,7 @@ namespace :deploy do
 
   desc "Stop unicorn"
   task :stop, :except => { :no_release => true } do
-    run "kill -s QUIT `cat /var/www/alwaysresolve.net/current/tmp/pids/unicorn.pid`"
+    run "kill -s QUIT `cat /var/www/alwaysresolve.net/shared/tmp/pids/unicorn.pid`"
   end
 
   namespace :rollback do
