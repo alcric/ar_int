@@ -54,6 +54,12 @@ class User
   ## Token authenticatable
   # field :authentication_token, :type => String
 
+  index :email, unique: true
+  index 'services.type'
+
+  has_many :domains
+  embeds_many :services
+
   validates_presence_of :name, :surname, :address1, :city, :zip, :country, :state, :fiscal_code, :email
   validates_uniqueness_of :fiscal_code, :email, :case_sensitive => false
 
@@ -69,4 +75,5 @@ class User
 
   attr_accessible :name, :surname, :company, :address1, :address2, :city, :zip, :country, :state,
                   :vat, :fiscal_code, :email, :telephone, :fax, :password, :password_confirmation, :remember_me
+
 end

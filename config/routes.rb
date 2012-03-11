@@ -1,9 +1,11 @@
 AlwaysResolve::Application.routes.draw do
+  resources   :services
+  resources   :domains
 
   devise_for :users
   resources  :users
 
-  match 'services' => 'home#services'
+  match 'products' => 'home#products'
   match 'aboutus' => 'home#aboutus'
   root :to => 'home#index'
 

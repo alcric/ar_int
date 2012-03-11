@@ -11,10 +11,14 @@
           <% end %>
         </li>
         <li>
-          <a href="#"><i class="icon-leaf"></i> <%= t 'always_resolve.show_services' %></a>
+          <%= link_to(services_path) do %>
+            <i class="icon-leaf"></i> <%= t 'always_resolve.show_services' %></a>
+          <% end %>
         </li>
         <li>
-          <a href="#"><i class="icon-star"></i> <%= t 'always_resolve.show_domains' %></a>
+          <%= link_to(domains_path) do %>
+            <i class="icon-star"></i> <%= t 'always_resolve.show_domains' %></a>
+          <% end %>
         </li>
       </ul>
     <% else %>
@@ -26,10 +30,12 @@
           <a href="#"><i class="icon-leaf"></i> <%= t 'always_resolve.show_services' %></a>
         </li>
         <li>
-          <a href="#"><i class="icon-star"></i> <%= t 'always_resolve.show_domains' %></a>
+          <%= link_to(domains_path) do %>
+            <i class="icon-star"></i> <%= t 'always_resolve.show_domains' %>
+          <% end %>
         </li>
         <li>
-          <a href="#"><i class="icon-shopping-cart"></i><%= t 'always_resolve.buy_service' %></a>
+          <a href="#"><i class="icon-shopping-cart"></i> <%= t 'always_resolve.buy_service' %></a>
         </li>
       </ul>
     <% end %>

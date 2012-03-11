@@ -1,0 +1,33 @@
+<% provide(:title, (t 'always_resolve.services').to_s.capitalize) %>
+<%= paginate @services %>
+
+<table class="table table-striped" >
+  <thead>
+  <tr>
+    <th><%= sortable_column (t 'always_resolve.type'), :column => "type" %></th>
+    <th><%= sortable_column (t 'always_resolve.domain'), :column => "domain_id" %></th>
+    <th><%= sortable_column (t 'always_resolve.email'), :column => "user_id" %></th>
+    <th><%= t 'always_resolve.actions' %></th>
+  </tr>
+  </thead>
+  <tbody>
+  <% @services.each do |service| %>
+  <tr>
+    <td><%= service.name %></td>
+    <td><%= service.surname %></td>
+    <td><%= service.email %></td>
+    <td>
+      <%= link_to service, :title => "#{t 'always_resolve.show'}" do%>
+        <i class="icon-eye-open"></i>
+      <% end %>
+      <%= link_to edit_service_path(service), :title => "#{t 'always_resolve.edit'}" do%>
+      <i class="icon-pencil"></i>
+      <% end %>
+      <%= link_to service, :confirm => "#{t 'always_resolve.are_you_sure'}", :method => :delete, :title => "#{t 'always_resolve.delete'}" do%>
+        <i class="icon-trash"></i>
+      <% end %>
+    </td>
+  </tr>
+  <% end %>
+  </tbody>
+</table>

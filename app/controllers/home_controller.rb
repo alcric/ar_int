@@ -2,7 +2,7 @@ class HomeController < ApplicationController
   def index
   end
 
-  def services
+  def products
   end
 
   def aboutus

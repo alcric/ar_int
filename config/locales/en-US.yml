@@ -72,6 +72,18 @@ en-US:
     details: Details
     last_login: Last login
     user_was_successfully_updated: User was successfully updated
+    domain: Domain
+    lastname: Last Name
+    type: Type
+    domains: Domains
+    name: Name
+    service: Service
+    new_domain: New domain
+    new_domain_help: insert new domain name and tld
+    submit: Submit
+    tld: tld
+    domain_create_success: Domain created succesfully
+    domain_delete_success: Domain created succesfully
   countries:
     AC: Ascension Island
     AD: Andorra
@@ -612,3 +624,7 @@ en-US:
       last: Last
       next: Next
       previous: Prev
+  mongoid:
+    errors:
+      messages:
+        invalid_collection: Invalid Collection

@@ -72,6 +72,18 @@ it:
     details: Dettagli
     last_login: Ultimo Accesso
     user_was_successfully_updated: Utente aggiornato
+    domain: Dominio
+    lastname: Cognome
+    type: Tipo
+    domains: Domini
+    name: Nome
+    service: Servizio
+    new_domain: Nuovo dominio
+    new_domain_help: inserisci il nome del nuovo dominio e del tld
+    submit: Invia
+    tld: tld
+    domain_create_success: Dominio creato correttamente
+    domain_delete_success: Dominio cancellato correttamente
   countries:
     AC: Isola di Ascensione
     AD: Andorra
@@ -614,3 +626,7 @@ it:
       last: Fine
       next: Prossimo
       previous: Precedente
+  mongoid:
+    errors:
+      messages:
+        invalid_collection: Invalid Collection

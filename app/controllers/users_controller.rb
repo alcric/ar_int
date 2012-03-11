@@ -6,8 +6,6 @@ class UsersController < ApplicationController
     if current_user.admin?
       # Tento di ordinare l'elenco utenti'
       sortable_column_order do |column, direction|
-        puts column
-        puts direction
         @users = User.sort_by(column, direction)
       end
 

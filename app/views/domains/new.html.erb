@@ -1,0 +1,25 @@
+<% provide(:title, (t 'always_resolve.domains').to_s.capitalize) %>
+<% if @domain.errors.any?   %>
+  <div class="alert alert-error fade in">
+    <a class="close" data-dismiss="alert" href="#">&times;</a>
+    <% # f.error_notification %>
+    <ul>
+      <% @domain.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+    </ul>
+  </div>
+<% end %>
+
+<%= simple_form_for @domain, :html => {:class => 'form-inline well'} do |f| %>
+  <%= f.label(t 'always_resolve.new_domain') %>
+  <br>
+  <%= f.input_field :dom , :label => false, :class => 'span3' , :placeholder => (t 'always_resolve.name') %> .
+  <%= f.input_field :tld , :label => false, :class => 'span1' , :placeholder => (t 'always_resolve.tld'),
+                    'data-provide' => "typeahead",  'data-source' => @public_suffix %>
+  <br>
+  <span class="help-inline"><%= t 'always_resolve.new_domain_help' %></span>
+  <br>
+  <%= f.button :submit, :class => 'btn-primary'  %>
+
+<% end %>
