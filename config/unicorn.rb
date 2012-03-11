@@ -16,7 +16,7 @@ listen "/var/www/alwaysresolve.net/current/tmp/sockets/unicorn.sock", :backlog =
 pid "/var/www/alwaysresolve.net/current/tmp/pids/unicorn.pid"
 
 # Set the path of the log files inside the log folder of the testapp
-stderr_path "/var/www/alwaysresolve.net/currentlog/unicorn.stderr.log"
+stderr_path "/var/www/alwaysresolve.net/current/log/unicorn.stderr.log"
 stdout_path "/var/www/alwaysresolve.net/current/log/unicorn.stdout.log"
 
 before_fork do |server, worker|
