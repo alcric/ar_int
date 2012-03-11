@@ -13,7 +13,7 @@ timeout 30
 
 # This is where we specify the socket.
 # We will point the upstream Nginx module to this socket later on
-listen "/var/www/alwaysresolve.net/shared/tmp/sockets/unicorn.sock", :backlog => 64
+listen "/var/www/alwaysresolve.net/shared/tmp/unicorn.sock", :backlog => 64
 
 pid "/var/www/alwaysresolve.net/shared/tmp/pids/unicorn.pid"
 
