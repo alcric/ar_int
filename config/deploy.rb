@@ -1,4 +1,6 @@
 require "bundler/capistrano"
+set :rails_env,                   "production"
+default_environment["RAILS_ENV"] = 'production'
 
 set :scm,                         :git
 set :application,                 "alwaysresolve.net"
@@ -6,7 +8,6 @@ set :repository,                  "git@github.com:alzuin/ar_int.git"
 set :branch,                      "origin/master"
 set :migrate_target,              :current
 set :ssh_options,                 { :forward_agent => true, :port => 8925 }
-set :rails_env,                   "production"
 set :deploy_to,                   "/var/www/#{application}"
 set :normalize_asset_timestamps,  false
 set :user,                        'deploy'
@@ -24,8 +25,6 @@ set(:current_release) { fetch(:current_path) }
 set(:current_revision)  { capture("cd #{current_path}; git rev-parse --short HEAD").strip }
 set(:latest_revision)   { capture("cd #{current_path}; git rev-parse --short HEAD").strip }
 set(:previous_revision) { capture("cd #{current_path}; git rev-parse --short HEAD@{1}").strip }
-
-default_environment["RAILS_ENV"] = 'development'
 
 default_environment["PATH"]         = "/usr/local/rvm/gems/ruby-1.9.3-p125/bin:/usr/local/rvm/gems/ruby-1.9.3-p125@global/bin:/usr/local/rvm/rubies/ruby-1.9.3-p125/bin:/usr/local/rvm/bin:/usr/local/bin:/usr/bin:/bin:/usr/local/games:/usr/games"
 default_environment["GEM_HOME"]     = "/usr/local/rvm/gems/ruby-1.9.3-p125"
