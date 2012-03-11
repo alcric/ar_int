@@ -1,6 +1,6 @@
 require "bundler/capistrano"
-set :rails_env,                   "development"
-default_environment["RAILS_ENV"] = 'development'
+set :rails_env,                    "production"
+default_environment["RAILS_ENV"] = 'production'
 
 set :scm,                         :git
 set :application,                 "alwaysresolve.net"
