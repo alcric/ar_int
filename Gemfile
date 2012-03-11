@@ -43,4 +43,6 @@ gem 'show_for'
 gem 'twitter-bootstrap-rails'
 gem 'handles_sortable_columns'
 gem 'public_suffix'
+
 gem 'capistrano'
+gem 'unicorn'
