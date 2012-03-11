@@ -25,7 +25,7 @@ stdout_path "/var/www/alwaysresolve.net/current/log/unicorn.stdout.log"
 if env == "production"
   # Help ensure your application will always spawn in the symlinked
   # "current" directory that Capistrano sets up.
-  working_directory "/var/www/alwaysresolve.netcurrent"
+  working_directory "/var/www/alwaysresolve.net/current"
 
   # feel free to point this anywhere accessible on the filesystem
   user 'deployer', 'staff'
