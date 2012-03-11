@@ -1,5 +1,5 @@
 worker_processes 2
-working_directory "/var/rails/testapp/"
+working_directory "/var/www/alwaysresolve/current"
 
 # This loads the application in the master process before forking
 # worker processes
@@ -11,13 +11,13 @@ timeout 30
 
 # This is where we specify the socket.
 # We will point the upstream Nginx module to this socket later on
-listen "/var/rails/testapp/tmp/sockets/unicorn.sock", :backlog => 64
+listen "/var/www/alwaysresolve/current/tmp/sockets/unicorn.sock", :backlog => 64
 
-pid "/var/rails/testapp/tmp/pids/unicorn.pid"
+pid "/var/www/alwaysresolve/current/tmp/pids/unicorn.pid"
 
 # Set the path of the log files inside the log folder of the testapp
-stderr_path "/var/rails/testapp/log/unicorn.stderr.log"
-stdout_path "/var/rails/testapp/log/unicorn.stdout.log"
+stderr_path "/var/www/alwaysresolve/currentlog/unicorn.stderr.log"
+stdout_path "/var/www/alwaysresolve/current/log/unicorn.stdout.log"
 
 before_fork do |server, worker|
 # This option works in together with preload_app true setting
