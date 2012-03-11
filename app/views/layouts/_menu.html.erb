@@ -25,10 +25,10 @@
     </a>
     <ul class="dropdown-menu">
       <li>
-        <%= link_to((t 'always_resolve.english'), "http://en.alwaysresolve.com:3000#{request.env['REQUEST_PATH']}") %>
+        <%= link_to((t 'always_resolve.english'), "#{APP_CONFIG_URL_EN}#{request.env['REQUEST_PATH']}") %>
       </li>
       <li>
-        <%= link_to((t 'always_resolve.italian'), "http://it.alwaysresolve.com:3000#{request.env['REQUEST_PATH']}") %>
+        <%= link_to((t 'always_resolve.italian'), "#{APP_CONFIG_URL_IT}#{request.env['REQUEST_PATH']}") %>
       </li>
     </ul>
   </li>
