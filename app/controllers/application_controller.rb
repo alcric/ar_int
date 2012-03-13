@@ -13,7 +13,6 @@ class ApplicationController < ActionController::Base
     else
       I18n.locale = locale
     end
-    logger.info (locale)
   end
 
   def extract_locale_from_subdomain

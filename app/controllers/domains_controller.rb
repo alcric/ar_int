@@ -2,10 +2,17 @@ class DomainsController < ApplicationController
   before_filter :authenticate_user!
 
   def index
+    @domains = nil
     if current_user.admin? # Se sono amministratore mostro tutti i servizi attivi
       # Tento di ordinare l'elenco servizi
       sortable_column_order do |column, direction|
-        @domains = Domain.sort_by(column, direction)
+        if !column.nil? && !direction.nil?
+          if direction == :asc
+            @domains = Domain.asc(column)
+          else
+            @domains = Domain.desc(column)
+          end
+        end
       end
 
       # Se non è stato passato l'ordine, domains è vuoto
@@ -16,28 +23,26 @@ class DomainsController < ApplicationController
         # Services è presente e già ordinato, pagino i risultati
         @domains = @domains.page(params[:page])
       end
+
     else # Non sono amministratore, elenco solo i domini che mi appartengono
-      @domains = Domain.where(:user_id => current_user.id)
-      if @domains.length > 1
-        # Tento di ordinare l'elenco domini
-        sortable_column_order do |column, direction|
-          puts column
-          puts direction
-          if !column.nil? && !direction.nil?
-            @domains = @domains.sort_by(column, direction)
+
+      # Tento di ordinare l'elenco domini
+      sortable_column_order do |column, direction|
+        if !column.nil? && !direction.nil?
+          if direction == :asc
+            @domains = current_user.domains.asc(column)
+          else
+            @domains = current_user.domains.desc(column)
           end
-
         end
+      end
 
-        # Se non è stato passato l'ordine, domain è vuoto
-        if @domains.nil?
-          # Utilizzo un ordinamento standard per tipo e pagino i risultati
-          @domains = Domain.where(:user_id => current_user).desc(:type).page(params[:page])
-        else
-          # Domains è presente e già ordinato, pagino i risultati
-          @domains = @domains.page(params[:page])
-        end
+      # Se non è stato passato l'ordine, domain è vuoto
+      if @domains.nil?
+        # Utilizzo un ordinamento standard per tipo e pagino i risultati
+        @domains = current_user.domains.desc(:name).page(params[:page])
       else
+        # Domains è presente e già ordinato, pagino i risultati
         @domains = @domains.page(params[:page])
       end
     end

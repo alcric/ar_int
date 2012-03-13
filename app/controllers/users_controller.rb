@@ -6,7 +6,13 @@ class UsersController < ApplicationController
     if current_user.admin?
       # Tento di ordinare l'elenco utenti'
       sortable_column_order do |column, direction|
-        @users = User.sort_by(column, direction)
+        if !column.nil? && !direction.nil?
+          if direction == :asc
+            @users = User.asc(column)
+          else
+            @users = User.desc(column)
+          end
+        end
       end
 
       # Se non è stato passato l'ordine, user è vuoto
