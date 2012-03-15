@@ -37,7 +37,8 @@ class PaypalExpressController < ApplicationController
 
       if profile_response.success?
         # capture the payment
-        @gateway.capture(money, authorize_response.authorization)
+        capture_response = @gateway.capture(money, authorize_response.authorization)
+        flash[:alert] = profile_response.message + '<br>' + capture_response.message
 
         # save paypal_profile_id to edit the subscription later
         # The profile_id is stored in: profile_response.params["profile_id"]
@@ -47,6 +48,8 @@ class PaypalExpressController < ApplicationController
         flash[:alert] = profile_response.message
         #redirect_to checkout_path
       end
+    else
+      flash[:alert] = authorize_response.message
     end
   end
 
