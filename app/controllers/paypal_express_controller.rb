@@ -11,6 +11,7 @@ class PaypalExpressController < ApplicationController
                                                   :cancel_return_url => services_path
     )
     redirect_to @gateway.redirect_url_for(setup_response.token)
+
   end
 
   def subscribe
