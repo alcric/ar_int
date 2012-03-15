@@ -23,6 +23,12 @@ class DomainsController < ApplicationController
         # Services è presente e già ordinato, pagino i risultati
         @domains = @domains.page(params[:page])
       end
+      # Controllo il tipo di formato richiesto per rispondere con XML in caso di query
+      respond_to do |format|
+        format.html
+        format.xml {render :xml => Domain.all.to_xml }
+      end
+
 
     else # Non sono amministratore, elenco solo i domini che mi appartengono
 
@@ -45,12 +51,14 @@ class DomainsController < ApplicationController
         # Domains è presente e già ordinato, pagino i risultati
         @domains = @domains.page(params[:page])
       end
+
+      # Controllo il tipo di formato richiesto per rispondere con XML in caso di query
+      respond_to do |format|
+        format.html
+        format.xml {render :xml => current_user.domains.all.to_xml }
+      end
     end
-    # Controllo il tipo di formato richiesto per rispondere con XML in caso di query
-    respond_to do |format|
-      format.html
-      format.xml {render :xml => Domain.all.to_xml }
-    end
+
   end
 
   def show

@@ -36,8 +36,10 @@
   </tbody>
 </table>
 
+<% if current_user.admin? %>
 <div align="center">
   <%= link_to(new_domain_path, :class => "btn-primary btn-large") do%>
     <i class="icon-plus-sign icon-white"></i> <b><%= t 'always_resolve.new_domain' %></b>
   <% end %>
 </div>
+<% end %>

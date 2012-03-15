@@ -4,7 +4,7 @@ class Service
   field :activated, :type => Time
   field :expire, :type => Time
 
-  embedded_in :user
-  #belongs_to :domain, index: true
+  belongs_to :user
+  belongs_to :domain, index: true
 
 end

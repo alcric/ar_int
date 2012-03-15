@@ -27,7 +27,9 @@
           <%= t 'always_resolve.user_menu' %>
         </li>
         <li>
-          <a href="#"><i class="icon-leaf"></i> <%= t 'always_resolve.show_services' %></a>
+          <%= link_to(services_path) do %>
+            <i class="icon-leaf"></i> <%= t 'always_resolve.show_services' %></a>
+          <% end %>
         </li>
         <li>
           <%= link_to(domains_path) do %>
@@ -35,7 +37,9 @@
           <% end %>
         </li>
         <li>
-          <a href="#"><i class="icon-shopping-cart"></i> <%= t 'always_resolve.buy_service' %></a>
+          <%= link_to(new_service_path) do %>
+            <i class="icon-shopping-cart"></i> <%= t 'always_resolve.buy_service' %>
+          <% end %>
         </li>
       </ul>
     <% end %>

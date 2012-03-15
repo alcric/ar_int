@@ -1,0 +1,24 @@
+<% provide(:title, (t 'always_resolve.new_service').to_s.capitalize) %>
+<% if @service.errors.any?   %>
+  <div class="alert alert-error fade in">
+    <a class="close" data-dismiss="alert" href="#">&times;</a>
+    <% # f.error_notification %>
+    <ul>
+      <% @service.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+    </ul>
+  </div>
+<% end %>
+
+<%= simple_form_for @service, :html => {:class => 'form-inline well'} do |f| %>
+  <%= f.label(t 'always_resolve.new_service') %>
+  <br>
+  <%= f.input_field :type , :label => false, :class => 'span3' , :placeholder => (t 'always_resolve.type') %>
+  <br>
+  <span class="help-inline"><%= t 'always_resolve.new_service_help' %></span>
+  <br>
+  <%# f.button :submit, :class => 'btn-primary'  %>
+  <%= link_to image_tag('https://www.paypalobjects.com/it_IT/IT/i/btn/btn_subscribeCC_LG.gif'), :controller => 'paypal_express', :action => 'checkout' %>
+
+<% end %>

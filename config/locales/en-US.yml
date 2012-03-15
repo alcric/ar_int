@@ -84,6 +84,7 @@ en-US:
     tld: tld
     domain_create_success: Domain created succesfully
     domain_delete_success: Domain created succesfully
+    new_service: New Service
   countries:
     AC: Ascension Island
     AD: Andorra
@@ -628,3 +629,5 @@ en-US:
     errors:
       messages:
         invalid_collection: Invalid Collection
+        document_not_found: Document not found
+        mixed_relations: Mixed relations
