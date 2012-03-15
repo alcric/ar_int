@@ -5,10 +5,12 @@ class PaypalExpressController < ApplicationController
 
   def checkout
     #total_as_cents, setup_purchase_params = get_setup_purchase_params @cart, request
+    logger.info(url_for(:controller => 'paypal_express', :action => 'subscribe'))
+    logger.info(services_url)
     setup_response = @gateway.setup_authorization(50,
                                                   :description => 'Descrizione',
-                                                  :return_url => url_for(:controller => 'paypal_express', :action => 'checkout'),
-                                                  :cancel_return_url => services_path
+                                                  :return_url => url_for(:controller => 'paypal_express', :action => 'subscribe'),
+                                                  :cancel_return_url => services_url
     )
     redirect_to @gateway.redirect_url_for(setup_response.token)
 
