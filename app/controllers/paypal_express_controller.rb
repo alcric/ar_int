@@ -19,7 +19,7 @@ class PaypalExpressController < ApplicationController
   def subscribe
     token = params[:token]
     # here we authorize the amount first before charging it
-    authorize_response = @gateway.authorize(50,
+    authorize_response = @gateway.authorize(1,
     :ip       => request.remote_ip,
     :payer_id => params[:PayerID],
     :token    => params[:token]
@@ -32,7 +32,7 @@ class PaypalExpressController < ApplicationController
         :start_date => Date.today + 1.month,
         :period => 'Month',
         :frequency => 1,
-        :amount => 50,
+        :amount => 1,
         :auto_bill_outstanding => true)
 
       if profile_response.success?
