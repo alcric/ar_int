@@ -30,7 +30,8 @@ gem 'mongoid', '~> 2.4.5'
 gem 'devise', '~> 2.0.4'
 gem 'devise-i18n'
 
-gem 'activemerchant', :require => 'active_merchant'
+#gem 'activemerchant', :require => 'active_merchant'
+gem 'activemerchant', :git => 'git://github.com/vantran/active_merchant.git'
 
 gem 'kaminari'
 gem 'gravatar_image_tag'
@@ -46,3 +47,5 @@ gem 'public_suffix'
 
 gem 'capistrano'
 gem 'unicorn'
+
+gem 'settingslogic'

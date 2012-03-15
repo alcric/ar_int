@@ -9,7 +9,7 @@ class Domain
 
   belongs_to :user
   has_many :records
-  #has_many :services
+  has_many :services
 
   validates_presence_of :dom, :tld
   validates_uniqueness_of :name

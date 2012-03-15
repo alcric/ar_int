@@ -1,3 +1,15 @@
+GIT
+  remote: git://github.com/vantran/active_merchant.git
+  revision: a56ed9fa5f8c270a271f0ed3aee0f4c373944829
+  specs:
+    activemerchant (1.20.1)
+      active_utils (>= 1.0.1)
+      activesupport (>= 2.3.11)
+      braintree (>= 2.0.0)
+      builder (>= 2.0.0)
+      i18n
+      money (<= 3.7.1)
+
 GEM
   remote: https://rubygems.org/
   specs:
@@ -17,14 +29,6 @@ GEM
     active_utils (1.0.3)
       activesupport (>= 2.3.11)
       i18n
-    activemerchant (1.20.4)
-      active_utils (>= 1.0.2)
-      activesupport (>= 2.3.11)
-      braintree (>= 2.0.0)
-      builder (>= 2.0.0)
-      i18n
-      json (>= 1.5.1)
-      money (<= 3.7.1)
     activemodel (3.2.1)
       activesupport (= 3.2.1)
       builder (~> 3.0.0)
@@ -42,7 +46,7 @@ GEM
     addressable (2.2.7)
     arel (3.0.2)
     bcrypt-ruby (3.0.1)
-    braintree (2.13.4)
+    braintree (2.14.0)
       builder (>= 2.0.0)
     bson (1.6.0)
     bson_ext (1.6.0)
@@ -213,6 +217,7 @@ GEM
       ffi (~> 1.0)
       multi_json (~> 1.0)
       rubyzip
+    settingslogic (2.0.8)
     show_for (0.2.4)
     simple_form (2.0.1)
       actionpack (~> 3.0)
@@ -251,7 +256,7 @@ PLATFORMS
   ruby
 
 DEPENDENCIES
-  activemerchant
+  activemerchant!
   bson_ext (~> 1.6.0)
   capistrano
   capybara (~> 1.1.2)
@@ -275,6 +280,7 @@ DEPENDENCIES
   rails (= 3.2.1)
   rspec-rails (~> 2.8.1)
   sass-rails (~> 3.2.3)
+  settingslogic
   show_for
   simple_form
   twitter-bootstrap-rails

@@ -84,6 +84,7 @@ it:
     tld: tld
     domain_create_success: Dominio creato correttamente
     domain_delete_success: Dominio cancellato correttamente
+    new_service: Nuovo Servizio
   countries:
     AC: Isola di Ascensione
     AD: Andorra
@@ -630,3 +631,5 @@ it:
     errors:
       messages:
         invalid_collection: Invalid Collection
+        document_not_found: File non trovato
+        mixed_relations: Mixed relations

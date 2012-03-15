@@ -58,7 +58,7 @@ class User
   index 'services.type'
 
   has_many :domains
-  embeds_many :services
+  has_many :services
 
   validates_presence_of :name, :surname, :address1, :city, :zip, :country, :state, :fiscal_code, :email
   validates_uniqueness_of :fiscal_code, :email, :case_sensitive => false
