@@ -73,9 +73,13 @@ AlwaysResolve::Application.configure do
   APP_CONFIG_URL_EN='http://en.alwaysresolve.com'
 
   config.after_initialize do
-    ActiveMerchant::Billing::Base.mode = :live
-    PAYPAL_LOGIN='alberto_api1.albertozuin.eu'
-    PAYPAL_PASSWORD= 'CFQ33KJKUVCGPJWP'
-    PAYPAL_SIGNATURE = 'AJTQ0L3soVsyBL7JBC096IRvutRNA.yvJQIvzaSAKrAQCa.u4aoluSFe'
+    #ActiveMerchant::Billing::Base.mode = :live
+    #PAYPAL_LOGIN='alberto_api1.albertozuin.eu'
+    #PAYPAL_PASSWORD= 'CFQ33KJKUVCGPJWP'
+    #PAYPAL_SIGNATURE = 'AJTQ0L3soVsyBL7JBC096IRvutRNA.yvJQIvzaSAKrAQCa.u4aoluSFe'
+    ActiveMerchant::Billing::Base.mode = :test
+    PAYPAL_LOGIN='sell_1331823182_biz_api1.albertozuin.eu'
+    PAYPAL_PASSWORD= '1331823221'
+    PAYPAL_SIGNATURE = 'AFcWxV21C7fd0v3bYYYRCpSSRl31AVI7SCQEenzwxLDF3HJJIbS3ZYM-'
   end
 end
