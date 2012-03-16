@@ -96,10 +96,12 @@ class ServicesController < ApplicationController
       if @service.service_type == 'service1'
         # sto cancellando un servizio dominio
         domain=@service.domain
-        # libero tutti i servizi legati al dominio
-        domain.services=nil
-        # cancello il dominio
-        domain.destroy
+        unless domain.nil?
+          # libero tutti i servizi legati al dominio
+          domain.services=nil
+          # cancello il dominio
+          domain.destroy
+        end
         # cancello il servicio
         @service.destroy
         flash[:notice] = (t 'always_resolve.service_delete_success')
