@@ -1,0 +1,38 @@
+<%= paginate @services %>
+<table class="table table-striped" >
+  <thead>
+  <tr>
+    <th><%= sortable_column (t 'always_resolve.service_type'), :column => "type" %></th>
+    <th><%= sortable_column (t 'always_resolve.domain'), :column => "domain_id" %></th>
+    <th><%= sortable_column (t 'always_resolve.activated'), :column => "activated" %></th>
+    <th><%= sortable_column (t 'always_resolve.expire'), :column => "expire" %></th>
+    <th><%= t 'always_resolve.actions' %></th>
+  </tr>
+  </thead>
+  <tbody>
+  <% @services.each do |service| %>
+  <tr>
+    <td><%= t 'always_resolve.' + service.service_type %></td>
+    <td>
+      <% unless service.domain.nil? %>
+        <%= service.domain.name %></td>
+      <% end %>
+    <td><%= service.activated %></td>
+    <td><%= service.expire %></td>
+    <td>
+      <%= link_to service, :title => "#{t 'always_resolve.show'}" do%>
+        <i class="icon-eye-open"></i>
+      <% end %>
+      <% unless service.service_type=='service1' %>
+        <%= link_to edit_service_path(service), :title => "#{t 'always_resolve.edit'}" do%>
+        <i class="icon-pencil"></i>
+        <% end %>
+      <% end %>
+      <%= link_to service, :confirm => "#{t 'always_resolve.are_you_sure'}", :method => :delete, :title => "#{t 'always_resolve.delete'}" do%>
+        <i class="icon-trash"></i>
+      <% end %>
+    </td>
+  </tr>
+  <% end %>
+  </tbody>
+</table>

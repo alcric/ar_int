@@ -1,6 +1,5 @@
 AlwaysResolve::Application.routes.draw do
   get "paypal_express/checkout"
-  get "paypal_express/subscribe"
 
   resources   :services
   resources   :domains

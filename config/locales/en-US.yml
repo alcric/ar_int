@@ -85,6 +85,33 @@ en-US:
     domain_create_success: Domain created succesfully
     domain_delete_success: Domain created succesfully
     new_service: New Service
+    ccv: CCV
+    credit_card_type: Credit Card Type
+    expire: Expire
+    new_service_help: Buy New Service
+    new_service_type: New service type
+    number: Credit card number
+    service1: DynDNS
+    service2: Cluster Base
+    service3: Cluster Pro
+    service4: GeoCluster
+    service_description: Service Description
+    activated: Activated
+    service_create_success: Service successfuly created
+    service_type: Service Type
+    and: and
+    at_the_moment_there_are: At the moment there are
+    at_the_moment_you_have: At the moment you have
+    associated_domain: Linked domain
+    not_assciated: Not associated
+    amount: Amount
+    billing_amount: Billing amount
+    billing_frequency: Billing frequency
+    every: Every
+    last_payment: Last payment
+    next: Next
+    next_payment: Next Payment
+    service_delete_success: Service deleted successfully
   countries:
     AC: Ascension Island
     AD: Andorra
@@ -631,3 +658,4 @@ en-US:
         invalid_collection: Invalid Collection
         document_not_found: Document not found
         mixed_relations: Mixed relations
+        validations: validations

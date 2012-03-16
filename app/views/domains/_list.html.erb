@@ -1,0 +1,43 @@
+<%= paginate @domains %>
+<table class="table table-striped" >
+  <thead>
+  <tr>
+    <th><%= sortable_column (t 'always_resolve.name'),    :column => "name" %></th>
+    <th><%= sortable_column (t 'always_resolve.service'), :column => "service_id" %></th>
+    <th><%= sortable_column (t 'always_resolve.email'),   :column => "email" %></th>
+    <th><%= t 'always_resolve.actions' %></th>
+  </tr>
+  </thead>
+  <tbody>
+  <% @domains.each do |domain| %>
+  <tr>
+    <td><%= domain.name %></td>
+    <td>
+      <% unless domain.services.nil?%>
+        <% service_count = 0 %>
+        <% domain.services.each do |service| %>
+          <% if service_count > 0 %>
+            <br>
+          <% end %>
+          <% service_count += 1 %>
+          <%= t 'always_resolve.' + service.service_type %>
+        <% end %>
+      <% end %>
+    </td>
+
+    <td><%= link_to User.find(domain.user_id).email, user_path(User.find(domain.user_id)) %></td>
+    <td>
+      <%= link_to domain, :title => "#{t 'always_resolve.show'}" do%>
+        <i class="icon-eye-open"></i>
+      <% end %>
+      <%= link_to edit_domain_path(domain), :title => "#{t 'always_resolve.edit'}" do%>
+      <i class="icon-pencil"></i>
+      <% end %>
+      <%= link_to domain, :confirm => "#{t 'always_resolve.are_you_sure'}", :method => :delete, :title => "#{t 'always_resolve.delete'}" do%>
+        <i class="icon-trash"></i>
+      <% end %>
+    </td>
+  </tr>
+  <% end %>
+  </tbody>
+</table>

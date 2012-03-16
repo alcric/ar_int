@@ -85,6 +85,33 @@ it:
     domain_create_success: Dominio creato correttamente
     domain_delete_success: Dominio cancellato correttamente
     new_service: Nuovo Servizio
+    ccv: CCV
+    credit_card_type: Tipo Carta di Credito
+    expire: Scadenza
+    new_service_help: Acquista un nuovo Servizio
+    new_service_type: Tipo servizio
+    number: Numero carta
+    service1: DynDNS
+    service2: Cluster Base
+    service3: Cluster Pro
+    service4: GeoCluster
+    service_description: Descrizione Servizio
+    activated: Attivato
+    service_create_success: Servizio creato correttamente
+    service_type: Tipo Servizio
+    and: e
+    at_the_moment_there_are: In questo momento sono attivi
+    at_the_moment_you_have: In questo momento hai
+    associated_domain: Dominio associato
+    not_assciated: Non associato
+    amount: Costo
+    billing_amount: Costo servizio
+    billing_frequency: Frequenza pagamento
+    every: Ogni
+    last_payment: Ultimo pagamento
+    next: prossimo
+    next_payment: Prossimo pagamento
+    service_delete_success: Servizio cancellato correttamente
   countries:
     AC: Isola di Ascensione
     AD: Andorra
@@ -633,3 +660,4 @@ it:
         invalid_collection: Invalid Collection
         document_not_found: File non trovato
         mixed_relations: Mixed relations
+        validations: controlli

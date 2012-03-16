@@ -49,3 +49,4 @@ gem 'capistrano'
 gem 'unicorn'
 
 gem 'settingslogic'
+gem 'uri-handler', :require => 'uri-handler'

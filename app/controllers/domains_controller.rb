@@ -2,63 +2,17 @@ class DomainsController < ApplicationController
   before_filter :authenticate_user!
 
   def index
-    @domains = nil
     if current_user.admin? # Se sono amministratore mostro tutti i servizi attivi
-      # Tento di ordinare l'elenco servizi
-      sortable_column_order do |column, direction|
-        if !column.nil? && !direction.nil?
-          if direction == :asc
-            @domains = Domain.asc(column)
-          else
-            @domains = Domain.desc(column)
-          end
-        end
-      end
-
-      # Se non è stato passato l'ordine, domains è vuoto
-      if @domains.nil?
-        # Utilizzo un ordinamento standard per nome e pagino i risultati
-        @domains = Domain.desc(:name).page(params[:page])
-      else
-        # Services è presente e già ordinato, pagino i risultati
-        @domains = @domains.page(params[:page])
-      end
-      # Controllo il tipo di formato richiesto per rispondere con XML in caso di query
-      respond_to do |format|
-        format.html
-        format.xml {render :xml => Domain.all.to_xml }
-      end
-
-
+      @domains = sort_and_paginate(Domain.all)
     else # Non sono amministratore, elenco solo i domini che mi appartengono
-
-      # Tento di ordinare l'elenco domini
-      sortable_column_order do |column, direction|
-        if !column.nil? && !direction.nil?
-          if direction == :asc
-            @domains = current_user.domains.asc(column)
-          else
-            @domains = current_user.domains.desc(column)
-          end
-        end
-      end
-
-      # Se non è stato passato l'ordine, domain è vuoto
-      if @domains.nil?
-        # Utilizzo un ordinamento standard per tipo e pagino i risultati
-        @domains = current_user.domains.desc(:name).page(params[:page])
-      else
-        # Domains è presente e già ordinato, pagino i risultati
-        @domains = @domains.page(params[:page])
-      end
-
-      # Controllo il tipo di formato richiesto per rispondere con XML in caso di query
-      respond_to do |format|
-        format.html
-        format.xml {render :xml => current_user.domains.all.to_xml }
-      end
+      @domains = sort_and_paginate(current_user.domains.all)
     end
 
+    # Controllo il tipo di formato richiesto per rispondere con XML in caso di query
+    respond_to do |format|
+      format.html
+      format.xml {render :xml => current_user.domains.all.to_xml }
+    end
   end
 
   def show
@@ -87,8 +41,16 @@ class DomainsController < ApplicationController
     if !params[:domain][:dom].to_s.strip.nil? && !params[:domain][:tld].to_s.strip.nil?
       name = params[:domain][:dom].to_s + "." + params[:domain][:tld]
     end
+    if current_user.admin?
+      @domain = current_user.domains.create(name: name, dom: params[:domain][:dom], tld: params[:domain][:tld])
+    else
+      if current_user.services.where(service_type: 'service1', domain_id: nil).count > 0
+        service = current_user.services.where(service_type: 'service1', domain_id: nil).first
+        @domain = current_user.domains.create(name: name, dom: params[:domain][:dom], tld: params[:domain][:tld])
+        @domain.services << service
+      end
+    end
 
-    @domain = current_user.domains.create(name: name, dom: params[:domain][:dom], tld: params[:domain][:tld])
     if @domain.save
       flash[:notice] = (t 'always_resolve.domain_create_success')
       redirect_to domains_path
@@ -99,6 +61,7 @@ class DomainsController < ApplicationController
 
   def destroy
     @domain = Domain.find(params[:id])
+    @domain.services=nil
     @domain.destroy
     flash[:notice] = (t 'always_resolve.domain_delete_success')
 

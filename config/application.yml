@@ -1,0 +1,18 @@
+defaults: &defaults
+  service1:
+    price: 15
+  service2:
+    price: 30
+  service3:
+    price: 40
+  service4:
+    price: 60
+
+development:
+  <<: *defaults
+
+test:
+  <<: *defaults
+
+production:
+  <<: *defaults

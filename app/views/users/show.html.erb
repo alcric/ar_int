@@ -52,6 +52,8 @@
       </table>
     </td>
   </tr>
+</table>
+<table class="table">
   <tr>
     <td colspan="2">
       <h2>Servizi</h2>
@@ -59,37 +61,11 @@
   </tr>
   <tr>
     <td colspan="2">
-      <% # paginate @user %>
-      <table class="table-striped">
-        <thead>
-          <tr>
-            <th><%= sortable_column (t 'always_resolve.firstname'), :column => "name" %></th>
-            <th><%= sortable_column (t 'always_resolve.firstname'), :column => "name" %></th>
-            <th><%= sortable_column (t 'always_resolve.firstname'), :column => "name" %></th>
-            <th><%= t 'always_resolve.actions' %></th>
-          </tr>
-        </thead>
-        <tbody>
-        <tr>
-          <td>1</td>
-          <td>2</td>
-          <td>3</td>
-          <td>
-            <% # link_to user, :title => "#{t 'always_resolve.show'}" do%>
-              <i class="icon-eye-open"></i>
-            <% # end %>
-            <% # link_to user, :title => "#{t 'always_resolve.edit'}" do%>
-            <i class="icon-pencil"></i>
-            <% #end %>
-            <% # link_to user, :title => "#{t 'always_resolve.delete'}" do%>
-              <i class="icon-trash"></i>
-            <% #end %>
-          </td>
-        </tr>
-        </tbody>
-      </table>
+      <%= render 'services/list' %>
     </td>
   </tr>
+</table>
+<table class="table">
   <tr>
     <td colspan="2">
       <h2>Domini</h2>
@@ -97,35 +73,7 @@
   </tr>
   <tr>
     <td colspan="2">
-      <% # paginate @user %>
-      <table class="table-striped">
-        <thead>
-          <tr>
-            <th><%= sortable_column (t 'always_resolve.firstname'), :column => "name" %></th>
-            <th><%= sortable_column (t 'always_resolve.firstname'), :column => "name" %></th>
-            <th><%= sortable_column (t 'always_resolve.firstname'), :column => "name" %></th>
-            <th><%= t 'always_resolve.actions' %></th>
-          </tr>
-        </thead>
-        <tbody>
-        <tr>
-          <td>1</td>
-          <td>2</td>
-          <td>3</td>
-          <td>
-            <% # link_to user, :title => "#{t 'always_resolve.show'}" do%>
-              <i class="icon-eye-open"></i>
-            <% #end %>
-            <% # link_to user, :title => "#{t 'always_resolve.edit'}" do%>
-            <i class="icon-pencil"></i>
-            <% #end %>
-            <% # link_to user, :title => "#{t 'always_resolve.delete'}" do%>
-              <i class="icon-trash"></i>
-            <% #end %>
-          </td>
-        </tr>
-        </tbody>
-      </table>
+      <%= render 'domains/list' %>
     </td>
   </tr>
 </table>

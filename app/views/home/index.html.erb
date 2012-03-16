@@ -4,8 +4,16 @@
       <img src="leaf.jpg" alt="Always Resolve" align="top">
     </td>
     <td>
-      <% if user_signed_in? %>
-        In questo momento sono attivi X domini, con Y servizi associati
+      <% if user_signed_in? %> 
+        <blockquote class="pull-right">
+        <p><b><%= t 'always_resolve.hello' %>, <%= current_user.name %></b></p>
+        <p><%= t 'always_resolve.last_login' %> <%= current_user.last_sign_in_at %></p>
+        <% if current_user.admin? %>
+            <p><%= t 'always_resolve.at_the_moment_there_are' %> <%= Domain.count %> <%= t 'always_resolve.domains' %> <%= t 'always_resolve.and' %> <%= Service.count %> <%= t 'always_resolve.services' %> </p>
+        <% else %>
+          <p><%= t 'always_resolve.at_the_moment_you_have' %> <%= current_user.domains.count %> <%= t 'always_resolve.domains' %> <%= t 'always_resolve.and' %> <%= current_user.services.count %> <%= t 'always_resolve.services' %> </p>
+        <%end%>
+        </blockquote>
       <% else %>
         <blockquote class="pull-right">
         <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer posuere erat a ante venenatis.</p>

@@ -11,14 +11,28 @@
   </div>
 <% end %>
 
-<%= simple_form_for @service, :html => {:class => 'form-inline well'} do |f| %>
-  <%= f.label(t 'always_resolve.new_service') %>
+<%= simple_form_for @service, :html => {:class => 'form-vertical well'} do |f| %>
+  <% if current_user.admin? %>
+    <%# f.label(t 'always_resolve.users') %>
+    <%= f.input :user, :label => (t 'always_resolve.users'), :as => :select, :collection => User.asc(:surname, :name).all %>
+
+  <% else %>
+    <%= f.label(t 'always_resolve.credit_card_type') %>
+    <%= f.select :type, [["Visa", "visa"], ["MasterCard", "master"], ["Discover", "discover"], ["American Express", "american_express"]] %>
+    <%= f.input :first_name , :label => (t 'always_resolve.firstname'), :class => 'span3' , :placeholder => (current_user.name) %>
+    <%= f.input :last_name , :label => (t 'always_resolve.lastname'), :class => 'span3' , :placeholder => (current_user.surname) %>
+    <%= f.input :number , :label => (t 'always_resolve.number'), :class => 'span3' , :placeholder => (t 'always_resolve.number') %>
+    <%= f.input :expire, :as => :date, :start_year => Date.today.year,
+                                :end_year => Date.today.year + 10, :discard_day => true,
+                                :order => [:month, :year] %>
+    <%= f.input :verification_value , :label => (t 'always_resolve.ccv'), :class => 'span3' , :placeholder => (t 'always_resolve.ccv') %>
+  <% end %>
   <br>
-  <%= f.input_field :type , :label => false, :class => 'span3' , :placeholder => (t 'always_resolve.type') %>
+  <%= f.label(t 'always_resolve.new_service_type') %>
+  <%= f.select :service_type, [[(t 'always_resolve.service1'), 'service1'], [(t 'always_resolve.service2'), 'service2'], [(t 'always_resolve.service3'), 'service3'], [(t 'always_resolve.service4'), 'service4']] %>
+
   <br>
-  <span class="help-inline"><%= t 'always_resolve.new_service_help' %></span>
-  <br>
-  <%# f.button :submit, :class => 'btn-primary'  %>
-  <%= link_to image_tag('https://www.paypalobjects.com/it_IT/IT/i/btn/btn_subscribeCC_LG.gif'), :controller => 'paypal_express', :action => 'checkout' %>
+  <%= f.button :submit, :class => 'btn-primary'  %>
+  <%# link_to image_tag('https://www.paypalobjects.com/it_IT/IT/i/btn/btn_subscribeCC_LG.gif'), :controller => 'paypal_express', :action => 'checkout' %>
 
 <% end %>

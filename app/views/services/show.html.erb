@@ -1,0 +1,42 @@
+<% provide(:title, (t 'always_resolve.details').to_s.capitalize) %>
+<% # Tabella con i dettagli dell'utente' %>
+<table class="table-striped">
+  <tr>
+    <td><b><%= t 'always_resolve.service' %></b></td>
+    <td><%= t 'always_resolve.' + @service.service_type %></td>
+    <td><b><%= t 'always_resolve.associated_domain' %></b></td>
+    <% if @service.domain.nil? %>
+      <td><%= t 'always_resolve.not_assciated' %></td>
+    <% else %>
+      <td><%= @service.domain.name %></td>
+    <% end %>
+  </tr>
+  <tr>
+    <td><b><%= t 'always_resolve.activated' %></b></td>
+    <td><%= @service.activated %></td>
+    <td><b><%= t 'always_resolve.expire' %></b></td>
+    <td><%= @service.expire %></td>
+  </tr>
+  <% unless @pay_data.nil? %>
+    <tr>
+      <td><b><%= t 'always_resolve.last_payment' %></b></td>
+      <td><%= @pay_data.params['last_payment_date'] %></td>
+      <td><b><%= t 'always_resolve.next_payment' %></b></td>
+      <td><%= @pay_data.params['next_billing_date'] %></td>
+    </tr>
+    <tr>
+      <td><b><%= t 'always_resolve.billing_amount' %></b></td>
+      <td><%= @pay_data.params['amount'] %> <%= @pay_data.params['amount_currency_id'] %></td>
+      <td><b><%= t 'always_resolve.billing_frequency' %></b></td>
+      <td><%= t 'always_resolve.every' %> <%= @pay_data.params['billing_frequency'] %> <%= @pay_data.params['billing_period'] %></td>
+    </tr>
+    <tr>
+      <td><b><%= t 'always_resolve.number' %></b></td>
+      <td><%= @pay_data.params['credit_card_type'] %>: XXXX-XXXX-XXXX-<%= @pay_data.params['credit_card_number'] %></td>
+      <td><b><%= t 'always_resolve.expire' %></b></td>
+      <td> <%= @pay_data.params['exp_month'] %>/<%= @pay_data.params['exp_year'] %></td>
+    </tr>
+  <% end %>
+</table>
+
+<%# debug(@pay_data) %>

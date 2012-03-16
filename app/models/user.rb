@@ -55,7 +55,7 @@ class User
   # field :authentication_token, :type => String
 
   index :email, unique: true
-  index 'services.type'
+  #index 'services.type'
 
   has_many :domains
   has_many :services

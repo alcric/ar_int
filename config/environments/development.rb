@@ -41,9 +41,9 @@ AlwaysResolve::Application.configure do
 
   config.after_initialize do
     ActiveMerchant::Billing::Base.mode = :test
-    PAYPAL_LOGIN='sell_1331807714_biz_api1.albertozuin.eu'
-    PAYPAL_PASSWORD= '1331807751'
-    PAYPAL_SIGNATURE = 'AJ-fHkzQ0tkCN.TqgSW4BSithMS-AxpuJwokHAkrzTaDWD0rZj0KpCum'
+    PAYPAL_LOGIN='sell_1331823182_biz_api1.albertozuin.eu'
+    PAYPAL_PASSWORD= '1331823221'
+    PAYPAL_SIGNATURE = 'AFcWxV21C7fd0v3bYYYRCpSSRl31AVI7SCQEenzwxLDF3HJJIbS3ZYM-'
   end
 
 end

@@ -1,42 +1,8 @@
 <% provide(:title, (t 'always_resolve.domains').to_s.capitalize) %>
 
-<table class="table table-striped" >
-  <thead>
-  <tr>
-    <th><%= sortable_column (t 'always_resolve.name'),    :column => "name" %></th>
-    <th><%= sortable_column (t 'always_resolve.service'), :column => "service_id" %></th>
-    <th><%= sortable_column (t 'always_resolve.email'),   :column => "email" %></th>
-    <th><%= t 'always_resolve.actions' %></th>
-  </tr>
-  </thead>
-  <tbody>
-  <% @domains.each do |domain| %>
-  <tr>
-    <td><%= domain.name %></td>
-    <td>
-      <% # if !domain.%>
-         <% # domain.service_id %>
-      <% # end %>
-    </td>
+<%= render 'domains/list' %>
 
-    <td><%= link_to User.find(domain.user_id).email, user_path(User.find(domain.user_id)) %></td>
-    <td>
-      <%= link_to domain, :title => "#{t 'always_resolve.show'}" do%>
-        <i class="icon-eye-open"></i>
-      <% end %>
-      <%= link_to edit_domain_path(domain), :title => "#{t 'always_resolve.edit'}" do%>
-      <i class="icon-pencil"></i>
-      <% end %>
-      <%= link_to domain, :confirm => "#{t 'always_resolve.are_you_sure'}", :method => :delete, :title => "#{t 'always_resolve.delete'}" do%>
-        <i class="icon-trash"></i>
-      <% end %>
-    </td>
-  </tr>
-  <% end %>
-  </tbody>
-</table>
-
-<% if current_user.admin? %>
+<% if current_user.admin? or current_user.services.where(service_type: 'service1', domain_id: nil).count > 0%>
 <div align="center">
   <%= link_to(new_domain_path, :class => "btn-primary btn-large") do%>
     <i class="icon-plus-sign icon-white"></i> <b><%= t 'always_resolve.new_domain' %></b>

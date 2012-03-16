@@ -246,6 +246,7 @@ GEM
       kgio (~> 2.6)
       rack
       raindrops (~> 0.7)
+    uri-handler (1.0.2)
     warden (1.1.1)
       rack (>= 1.0)
     xpath (0.1.4)
@@ -286,3 +287,4 @@ DEPENDENCIES
   twitter-bootstrap-rails
   uglifier (>= 1.0.3)
   unicorn
+  uri-handler

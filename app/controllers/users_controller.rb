@@ -4,25 +4,7 @@ class UsersController < ApplicationController
   def index
     # Controllo se l'ultente è amministratore
     if current_user.admin?
-      # Tento di ordinare l'elenco utenti'
-      sortable_column_order do |column, direction|
-        if !column.nil? && !direction.nil?
-          if direction == :asc
-            @users = User.asc(column)
-          else
-            @users = User.desc(column)
-          end
-        end
-      end
-
-      # Se non è stato passato l'ordine, user è vuoto
-      if @users.nil?
-        # Utilizzo un ordinamento standard per cognome e pagino i risultati
-        @users = User.desc(:surname).page(params[:page])
-      else
-        # User è presente e già ordinato, pagino i risultati
-        @users = @users.page(params[:page])
-      end
+      @users=sort_and_paginate(User.all)
 
       # Controllo il tipo di formato richiesto per rispondere con XML in caso di query
       respond_to do |format|
@@ -37,6 +19,8 @@ class UsersController < ApplicationController
   def show
     if current_user.admin?
       @user = User.find(params[:id])
+      @domains = sort_and_paginate(@user.domains)
+      @services = sort_and_paginate(@user.services)
       respond_to do |format|
         format.html
         format.xml {render :xml => @user }
