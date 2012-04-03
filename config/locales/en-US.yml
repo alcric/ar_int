@@ -83,7 +83,7 @@ en-US:
     submit: Submit
     tld: tld
     domain_create_success: Domain created succesfully
-    domain_delete_success: Domain created succesfully
+    domain_delete_success: Domain deleted succesfully
     new_service: New Service
     ccv: CCV
     credit_card_type: Credit Card Type
@@ -112,6 +112,22 @@ en-US:
     next: Next
     next_payment: Next Payment
     service_delete_success: Service deleted successfully
+    value: Value
+    new_record: ! 'New record:'
+    new_cluster: New cluster
+    rtype: Record type
+    destination: Destination
+    nome: Name
+    priority: Priority
+    weight: Weight
+    port: Port
+    record_create_success: Record created sucessfully
+    error:
+      bind_port: Server don't respond
+      dns_not_authoritative: DNS not authoritative
+      dns_not_found: DNS not found
+      not_correct_destination_type: incorrect destination type
+    record_delete_success: Record delete sucessfully
   countries:
     AC: Ascension Island
     AD: Andorra
@@ -659,3 +675,5 @@ en-US:
         document_not_found: Document not found
         mixed_relations: Mixed relations
         validations: validations
+        calling_document_find_with_nil_is_invalid: Calling document find with nil
+          is invalid

@@ -11,11 +11,21 @@ class DomainsController < ApplicationController
     # Controllo il tipo di formato richiesto per rispondere con XML in caso di query
     respond_to do |format|
       format.html
-      format.xml {render :xml => current_user.domains.all.to_xml }
+      format.xml {render :xml => @domains.to_xml }
     end
   end
 
   def show
+    @domain = Domain.find(params[:id])
+    if current_user == @domain.user
+      @whois  = Whois.whois(@domain.name)
+      respond_to do |format|
+          format.html
+          format.xml {render :xml => @domain.records.all.to_xml }
+      end
+    else
+      redirect_to domains_path
+    end
   end
 
   def new
@@ -35,6 +45,11 @@ class DomainsController < ApplicationController
   end
 
   def edit
+    @domain = Domain.find(params[:id])
+    @records = sort_and_paginate(@domain.records.all)
+    if current_user != @domain.user
+      redirect_to domains_path
+    end
   end
 
   def create
@@ -61,14 +76,22 @@ class DomainsController < ApplicationController
 
   def destroy
     @domain = Domain.find(params[:id])
-    @domain.services=nil
-    @domain.destroy
-    flash[:notice] = (t 'always_resolve.domain_delete_success')
+    if current_user != @domain.user
+      redirect_to domains_path
+    else
+      @domain.services=nil
+      @domain.destroy
+      flash[:notice] = (t 'always_resolve.domain_delete_success')
 
-    respond_to do |format|
-      format.html { redirect_to(domains_path) }
-      format.xml  { head :ok }
+      respond_to do |format|
+        format.html { redirect_to(domains_path) }
+        format.xml  { head :ok }
+      end
     end
+  end
+
+  def newRecord
+    @tipo=params[:tipo]
   end
 
 end

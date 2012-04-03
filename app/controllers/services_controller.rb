@@ -12,7 +12,7 @@ class ServicesController < ApplicationController
     # Controllo il tipo di formato richiesto per rispondere con XML in caso di query
     respond_to do |format|
       format.html
-      format.xml {render :xml => current_user.services.all.to_xml }
+      format.xml {render :xml => @services.all.to_xml }
     end
   end
 
@@ -23,9 +23,14 @@ class ServicesController < ApplicationController
     else
       @pay_data = @gateway.get_profile_details(@service.profile_id)
     end
+    respond_to do |format|
+      format.html
+      format.xml {render :xml => @service.to_xml }
+    end
   end
 
   def edit
+
   end
 
   def new
@@ -40,7 +45,7 @@ class ServicesController < ApplicationController
         flash[:notice] = (t 'always_resolve.service_create_success')
         redirect_to services_path
       else
-        #flash[:alert] = @service.message
+        flash[:alert] = (t 'always_resolve.service_create_failure')
         redirect new_service_url
       end
     else

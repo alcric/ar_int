@@ -154,6 +154,11 @@ GEM
       mongoid (~> 2.0)
       rspec (~> 2)
     multi_json (1.1.0)
+    net-dns (0.6.1)
+    net-ldap (0.2.2)
+    net-ping (1.5.3)
+      ffi (>= 1.0.0)
+      net-ldap (~> 0.2.2)
     net-scp (1.0.4)
       net-ssh (>= 1.99.1)
     net-sftp (2.0.5)
@@ -218,7 +223,6 @@ GEM
       multi_json (~> 1.0)
       rubyzip
     settingslogic (2.0.8)
-    show_for (0.2.4)
     simple_form (2.0.1)
       actionpack (~> 3.0)
       activemodel (~> 3.0)
@@ -249,6 +253,7 @@ GEM
     uri-handler (1.0.2)
     warden (1.1.1)
       rack (>= 1.0)
+    whois (2.4.0)
     xpath (0.1.4)
       nokogiri (~> 1.3)
     ya2yaml (0.31)
@@ -277,14 +282,16 @@ DEPENDENCIES
   localeapp
   mongoid (~> 2.4.5)
   mongoid-rspec (~> 1.4.4)
+  net-dns
+  net-ping
   public_suffix
   rails (= 3.2.1)
   rspec-rails (~> 2.8.1)
   sass-rails (~> 3.2.3)
   settingslogic
-  show_for
   simple_form
   twitter-bootstrap-rails
   uglifier (>= 1.0.3)
   unicorn
   uri-handler
+  whois

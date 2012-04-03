@@ -57,8 +57,8 @@ class User
   index :email, unique: true
   #index 'services.type'
 
-  has_many :domains
-  has_many :services
+  has_many :domains, :dependent => :destroy
+  has_many :services, :dependent => :destroy
 
   validates_presence_of :name, :surname, :address1, :city, :zip, :country, :state, :fiscal_code, :email
   validates_uniqueness_of :fiscal_code, :email, :case_sensitive => false

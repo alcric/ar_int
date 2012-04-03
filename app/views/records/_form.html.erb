@@ -1,0 +1,28 @@
+<% if @record.errors.any?   %>
+  <div class="alert alert-error fade in">
+    <a class="close" data-dismiss="alert" href="#">&times;</a>
+    <% # f.error_notification %>
+    <ul>
+      <% @record.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+    </ul>
+  </div>
+<% end %>
+
+<%= simple_form_for [@domain,@record], :html => {:class => 'form form-inline well'} do |f| %>
+  <%= f.label  (t 'always_resolve.name') %>  </br>
+  <%= f.input_field :terzo_livello , :class => 'span3' %> . <%= @domain.name %>
+
+  <% if @tipo == 'MX' or @tipo =='SRV' %>
+    <%= f.input :priority , :label => (t 'always_resolve.priority'), :class => 'span1' %>
+  <% end %>
+
+  <% if @tipo == 'SRV' %>
+    <%= f.input :weight , :label => (t 'always_resolve.weight'), :class => 'span1' %>
+    <%= f.input :port , :label => (t 'always_resolve.port'), :class => 'span1' %>
+  <% end %>
+  <%= f.input :dest , :label => (t 'always_resolve.destination'), :class => 'span3' %>
+  <%= f.input :tipo, :as => :hidden, :input_html => { :value => @tipo } %>
+  <%= f.button :submit, :class => 'btn-primary'  %>
+<% end %>

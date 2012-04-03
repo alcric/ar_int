@@ -8,7 +8,7 @@ class Domain
   index 'records.name'
 
   belongs_to :user
-  has_many :records
+  has_many :records, :dependent => :destroy
   has_many :services
 
   validates_presence_of :dom, :tld

@@ -1,8 +1,13 @@
 AlwaysResolve::Application.routes.draw do
-  get "paypal_express/checkout"
 
   resources   :services
-  resources   :domains
+  resources   :domains do
+    resources :records do
+      member do
+        get 'dyndns'
+      end
+    end
+  end
 
   devise_for :users
   resources  :users

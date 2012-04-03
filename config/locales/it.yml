@@ -112,6 +112,22 @@ it:
     next: prossimo
     next_payment: Prossimo pagamento
     service_delete_success: Servizio cancellato correttamente
+    value: Valore
+    new_record: ! 'Nuovo record:'
+    new_cluster: Nuovo cluster
+    rtype: Tipo record
+    destination: Destinazione
+    nome: Nome
+    priority: Priorità
+    weight: Peso
+    port: Porta
+    record_create_success: Record aggiunto con successo
+    error:
+      bind_port: Il server non risponde
+      dns_not_authoritative: DNS non autoritativo
+      dns_not_found: Server DNS non trovato
+      not_correct_destination_type: server di destinazione non corretto
+    record_delete_success: Record cancellato correttamente
   countries:
     AC: Isola di Ascensione
     AD: Andorra
@@ -661,3 +677,5 @@ it:
         document_not_found: File non trovato
         mixed_relations: Mixed relations
         validations: controlli
+        calling_document_find_with_nil_is_invalid: Calling document find with nil
+          is invalid

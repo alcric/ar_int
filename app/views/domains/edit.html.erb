@@ -1,0 +1,75 @@
+<% provide(:title, @domain.name) %>
+<% if @domain.errors.any?   %>
+  <div class="alert alert-error fade in">
+    <a class="close" data-dismiss="alert" href="#">&times;</a>
+    <% # f.error_notification %>
+    <ul>
+      <% @domain.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+    </ul>
+  </div>
+<% end %>
+<table class="table table-striped" >
+  <tr>
+    <td><%= t 'always_resolve.new_record' %></td>
+    <td><%= link_to "A", new_domain_record_path(@domain, :tipo => "A"), :class => "btn btn-info" %></td>
+    <td><%= link_to "CNAME", new_domain_record_path(@domain, :tipo => "CNAME"), :class => "btn btn-info" %></td>
+    <td><%= link_to "MX", new_domain_record_path(@domain, :tipo => "MX"), :class => "btn btn-info" %></td>
+    <td><%= link_to "NS", new_domain_record_path(@domain, :tipo => "NS"), :class => "btn btn-info" %></td>
+    <td><%= link_to "SRV", new_domain_record_path(@domain, :tipo => "SRV"), :class => "btn btn-info" %></td>
+    <td><%= link_to "TXT", new_domain_record_path(@domain, :tipo => "TXT"), :class => "btn btn-info" %></td>
+  </tr>
+</table>
+<table class="table table-striped" >
+  <tr>
+    <td><%= t 'always_resolve.new_cluster' %></td>
+    <% if hasFreeService?(current_user,'all') %>
+      <% if hasFreeService?(current_user,'service2') %>
+        <td><a class="btn btn-info" href=""><%= t 'always_resolve.service2' %></a></td>
+      <% end %>
+      <% if hasFreeService?(current_user,'service3') %>
+        <td><a class="btn btn-info" href=""><%= t 'always_resolve.service3' %></a></td>
+      <% end %>
+      <% if hasFreeService?(current_user,'service4') %>
+        <td><a class="btn btn-info" href=""><%= t 'always_resolve.service4' %></a></td>
+      <% end %>
+    <% else %>
+      <td><a class="btn btn-info" href=""><%= t 'always_resolve.buy_service' %></a></td>
+    <% end %>
+  </tr>
+ </table>
+
+
+
+<%= paginate @records %>
+<table class="table table-striped" >
+  <thead>
+  <tr>
+    <th><%= sortable_column (t 'always_resolve.name'),    :column => "nome" %></th>
+    <th><%= sortable_column (t 'always_resolve.type'),   :column => "tipo" %></th>
+    <th><%= sortable_column (t 'always_resolve.value'),   :column => "risposta" %></th>
+    <th><%= t 'always_resolve.actions' %></th>
+  </tr>
+  </thead>
+  <tbody>
+  <% @records.each do |record| %>
+  <tr>
+    <td><%= record.nome %></td>
+    <td><%= record.tipo %></td>
+    <td><%= record.risposta %></td>
+    <td>
+      <%= link_to domain_record_path(@domain,record), :title => "#{t 'always_resolve.show'}" do%>
+        <i class="icon-eye-open"></i>
+      <% end %>
+      <%= link_to edit_domain_record_path(@domain,record), :title => "#{t 'always_resolve.edit'}" do%>
+      <i class="icon-pencil"></i>
+      <% end %>
+      <%= link_to domain_record_path(@domain,record), :confirm => "#{t 'always_resolve.are_you_sure'}", :method => :delete, :title => "#{t 'always_resolve.delete'}" do%>
+        <i class="icon-trash"></i>
+      <% end %>
+    </td>
+  </tr>
+  <% end %>
+  </tbody>
+</table>
