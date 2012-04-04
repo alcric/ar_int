@@ -411,7 +411,11 @@ it:
     - Ven
     - Sab
     abbr_month_names:
-    - !!null 
+    - !ruby/object:Syck::PrivateType
+      type_id: 'null'
+      value: !str
+        str: ''
+        taguri: x-private:null
     - Gen
     - Feb
     - Mar
@@ -437,7 +441,11 @@ it:
       long: ! '%d %B %Y'
       short: ! '%d %b'
     month_names:
-    - !!null 
+    - !ruby/object:Syck::PrivateType
+      type_id: 'null'
+      value: !str
+        str: ''
+        taguri: x-private:null
     - Gennaio
     - Febbraio
     - Marzo

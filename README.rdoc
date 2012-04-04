@@ -1,30 +1,30 @@
 == API admin
 
 * Elenco utenti
-curl http://www.alwaysresolve.it:3000/users -H "Accept: application/xml" --user adminuser:password
+curl http://www.alwaysresolve.com/users -H "Accept: application/xml" --user adminuser:password
 
 * Dettaglio utente
-curl http://www.alwaysresolve.it:3000/users/[id_utente] -H "Accept: application/xml" --user adminuser:password
+curl http://www.alwaysresolve.com/users/[id_utente] -H "Accept: application/xml" --user adminuser:password
 
 
 == API utente
 * Elenco domini cliente
-curl http://www.alwaysresolve.it:3000/domains -H "Accept: application/xml" --user user:password
+curl http://www.alwaysresolve.com/domains -H "Accept: application/xml" --user user:password
 
 * Elenco record dominio
-curl http://www.alwaysresolve.it:3000/domains/[id_dominio] -H "Accept: application/xml" --user user:password
+curl http://www.alwaysresolve.com/domains/[id_dominio] -H "Accept: application/xml" --user user:password
 
 * Dettaglio record
-curl http://www.alwaysresolve.it:3000/domains/[id_dominio]/records/[id_record] -H "Accept: application/xml" --user user:password
+curl http://www.alwaysresolve.com/domains/[id_dominio]/records/[id_record] -H "Accept: application/xml" --user user:password
 
 * Cancellazione record
-curl http://www.alwaysresolve.it:3000/domains/[id_dominio]/records/[id_record] -X DELETE  -H "Accept: application/xml" --user user:password
+curl http://www.alwaysresolve.com/domains/[id_dominio]/records/[id_record] -X DELETE  -H "Accept: application/xml" --user user:password
 
 * Aggiunta record
-curl http://www.alwaysresolve.it:3000/domains/[id_dominio]/records -d "record[tipo]=A|TXT|NS|CNAME|SRV|MX" -d "record[terzo_livello]=www" -d "record[dest]=10.1.1.1" -d "record[priority]=20" -d "record[weight]=10" -d "record[port]=5006" -H "Accept: application/xml" --user user:password
+curl http://www.alwaysresolve.com/domains/[id_dominio]/records -d "record[tipo]=A|TXT|NS|CNAME|SRV|MX" -d "record[terzo_livello]=www" -d "record[dest]=10.1.1.1" -d "record[priority]=20" -d "record[weight]=10" -d "record[port]=5006" -H "Accept: application/xml" --user user:password
 
 * Modifica record
-curl http://www.alwaysresolve.it:3000/domains/[id_dominio]/records/[id_record] -X PUT -d "record[tipo]=A|TXT|NS|CNAME|SRV|MX" -d "record[terzo_livello]=www" -d "record[dest]=10.1.1.1" -d "record[priority]=20" -d "record[weight]=10" -d "record[port]=5006" -H "Accept: application/xml" -H "Accept: application/xml" --user user:password
+curl http://www.alwaysresolve.com/domains/[id_dominio]/records/[id_record] -X PUT -d "record[tipo]=A|TXT|NS|CNAME|SRV|MX" -d "record[terzo_livello]=www" -d "record[dest]=10.1.1.1" -d "record[priority]=20" -d "record[weight]=10" -d "record[port]=5006" -H "Accept: application/xml" -H "Accept: application/xml" --user user:password
 
 * Update IP dyndns
-curl http://it.alwaysresolve.it:3000/domains/[id_dominio]/records/[id_record]/dyndns -H "Accept: application/xml" --user user:password
+curl http://www.alwaysresolve.com/domains/[id_dominio]/records/[id_record]/dyndns -H "Accept: application/xml" --user user:password

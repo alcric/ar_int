@@ -210,7 +210,7 @@ class Record
           res = Net::DNS::Resolver.new(:nameserver => ip,
                                        :recursive => false,
                                        :retry => 10
-                                       ).query(record.nome, Net::DNS::NS)
+                                       ).query(record.nome, Net::DNS::SOA)
           ns_authoritative = false
           res.answer.each do |rr|
             ns_authoritative = true
