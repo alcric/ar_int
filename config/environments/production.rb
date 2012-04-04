@@ -83,6 +83,4 @@ AlwaysResolve::Application.configure do
     PAYPAL_SIGNATURE = 'AFcWxV21C7fd0v3bYYYRCpSSRl31AVI7SCQEenzwxLDF3HJJIbS3ZYM-'
   end
 
-  require 'yaml'
-  YAML::ENGINE.yamler= 'syck'
 end

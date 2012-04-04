@@ -45,8 +45,8 @@ AlwaysResolve::Application.configure do
     PAYPAL_PASSWORD= '1331823221'
     PAYPAL_SIGNATURE = 'AFcWxV21C7fd0v3bYYYRCpSSRl31AVI7SCQEenzwxLDF3HJJIbS3ZYM-'
   end
-  require 'yaml'
-  YAML::ENGINE.yamler= 'syck'
+#  require 'yaml'
+#  YAML::ENGINE.yamler= 'YAML'
 end
 
 

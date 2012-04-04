@@ -1,9 +1,23 @@
 en-US:
   always_resolve:
+    edit_record: Edit record
+    aboutus: About us
+    actions: Actions
+    activated: Activated
     address: Address
+    admin_menu: Admin menu
+    amount: Amount
+    and: and
     are_you_sure: Are you sure?
+    associated_domain: Linked domain
+    at_the_moment_there_are: At the moment there are
+    at_the_moment_you_have: At the moment you have
     back: Back
+    billing_amount: Billing amount
+    billing_frequency: Billing frequency
+    buy_service: Buy services
     cancel_my_account: Cancel my account
+    ccv: CCV
     cf: Taxpayer's code
     change_my_password: Change my password
     change_your_password: Change your password
@@ -12,12 +26,27 @@ en-US:
     confirm_new_password: Confirm new password
     confirmation_instructions: Confirmation instructions
     country: Country
+    credit_card_type: Credit Card Type
     current_password: Current Password
+    delete: Delete
+    destination: Destination
+    details: Details
     didnt_receive_confirmation_instructions: Didn't receive confirmation instructions
+    domain: Domain
+    domain_create_success: Domain created succesfully
+    domain_delete_success: Domain deleted succesfully
+    domains: Domains
     edit: Edit
     edit_account: Edit account
     email: Email
     english: English
+    error:
+      bind_port: Server don't respond
+      dns_not_authoritative: DNS not authoritative
+      dns_not_found: DNS not found
+      not_correct_destination_type: incorrect destination type
+    every: Every
+    expire: Expire
     farm: Farm
     fax: Fax
     firstname: First Name
@@ -28,106 +57,78 @@ en-US:
       please ignore this email
     italian: Italian
     language: Language
+    last_login: Last login
+    last_payment: Last payment
+    lastname: Last Name
     leave_blank_if_you_dont_want_to_change_it: Leave blank id you don't want to change
       it
     login: Login
     logout: Logout
+    name: Name
+    new_cluster: New cluster
+    new_domain: New domain
+    new_domain_help: insert new domain name and tld
     new_password: New password
+    new_record: ! 'New record:'
+    new_service: New Service
+    new_service_help: Buy New Service
+    new_service_type: New service type
+    next: Next
+    next_payment: Next Payment
+    nome: Name
+    not_assciated: Not associated
+    number: Credit card number
     password: Password
     password_confirmation: Password confirmation
     phone: Phone
+    port: Port
+    priority: Priority
+    record_create_success: Record created sucessfully
+    record_delete_success: Record delete sucessfully
     rememberme: Remember me
     resend_confirmation_instructions: Resend confirmation instructions
     reset_password_instructions: Reset password instruction
+    rtype: Record type
     secondname: Last Name
     send_me_reset_password_instructions: Send me reset password instructions
+    service: Service
+    service1: DynDNS
+    service2: Cluster Base
+    service3: Cluster Pro
+    service4: GeoCluster
+    service_create_success: Service successfuly created
+    service_delete_success: Service deleted successfully
+    service_description: Service Description
+    service_type: Service Type
+    services: Services
+    show: Show
+    show_domains: Show domains
+    show_services: Show services
+    show_users: Show users
     sign_up: Sign up
     someone_has_requested_a_link_to_change_your_password_and_you_can_do_this_through_the_link_below: Someone
       has requested a link to change your password and you can do this through the
       link below
     state: State
+    submit: Submit
+    tld: tld
+    type: Type
     unhappy: Unhappy
     update: Update
+    user_menu: User menu
+    user_was_successfully_updated: User was successfully updated
+    users: Users
+    value: Value
     vat: VAT
     we_need_your_current_password_to_confirm_your_changes: We need your current password
       to confirm your changes
+    weight: Weight
     welcome: Welcome
     you_can_confirm_your_account_email_through_the_link_below: You can confirm your
       account email through the link below
     your_password_wont_change_until_you_access_the_link_above_and_create_a_new_one: Your
       password wont change until you access the link above and create a new one
     zip: ZIP
-    admin_menu: Admin menu
-    buy_service: Buy services
-    show_domains: Show domains
-    show_services: Show services
-    show_users: Show users
-    user_menu: User menu
-    aboutus: About us
-    services: Services
-    actions: Actions
-    users: Users
-    show: Show
-    delete: Delete
-    details: Details
-    last_login: Last login
-    user_was_successfully_updated: User was successfully updated
-    domain: Domain
-    lastname: Last Name
-    type: Type
-    domains: Domains
-    name: Name
-    service: Service
-    new_domain: New domain
-    new_domain_help: insert new domain name and tld
-    submit: Submit
-    tld: tld
-    domain_create_success: Domain created succesfully
-    domain_delete_success: Domain deleted succesfully
-    new_service: New Service
-    ccv: CCV
-    credit_card_type: Credit Card Type
-    expire: Expire
-    new_service_help: Buy New Service
-    new_service_type: New service type
-    number: Credit card number
-    service1: DynDNS
-    service2: Cluster Base
-    service3: Cluster Pro
-    service4: GeoCluster
-    service_description: Service Description
-    activated: Activated
-    service_create_success: Service successfuly created
-    service_type: Service Type
-    and: and
-    at_the_moment_there_are: At the moment there are
-    at_the_moment_you_have: At the moment you have
-    associated_domain: Linked domain
-    not_assciated: Not associated
-    amount: Amount
-    billing_amount: Billing amount
-    billing_frequency: Billing frequency
-    every: Every
-    last_payment: Last payment
-    next: Next
-    next_payment: Next Payment
-    service_delete_success: Service deleted successfully
-    value: Value
-    new_record: ! 'New record:'
-    new_cluster: New cluster
-    rtype: Record type
-    destination: Destination
-    nome: Name
-    priority: Priority
-    weight: Weight
-    port: Port
-    record_create_success: Record created sucessfully
-    error:
-      bind_port: Server don't respond
-      dns_not_authoritative: DNS not authoritative
-      dns_not_found: DNS not found
-      not_correct_destination_type: incorrect destination type
-    record_delete_success: Record delete sucessfully
   countries:
     AC: Ascension Island
     AD: Andorra
@@ -411,11 +412,7 @@ en-US:
     - Fri
     - Sat
     abbr_month_names:
-    - !ruby/object:Syck::PrivateType
-      type_id: 'null'
-      value: !str
-        str: ''
-        taguri: x-private:null
+    - 
     - Jan
     - Feb
     - Mar
@@ -441,11 +438,7 @@ en-US:
       long: ! '%B %d, %Y'
       short: ! '%b %d'
     month_names:
-    - !ruby/object:Syck::PrivateType
-      type_id: 'null'
-      value: !str
-        str: ''
-        taguri: x-private:null
+    - 
     - January
     - February
     - March
@@ -611,6 +604,15 @@ en-US:
       create: Create %{model}
       submit: Save %{model}
       update: Update %{model}
+  mongoid:
+    errors:
+      messages:
+        calling_document_find_with_nil_is_invalid: Calling document find with nil
+          is invalid
+        document_not_found: Document not found
+        invalid_collection: Invalid Collection
+        mixed_relations: Mixed relations
+        validations: validations
   number:
     currency:
       format:
@@ -676,12 +678,3 @@ en-US:
       last: Last
       next: Next
       previous: Prev
-  mongoid:
-    errors:
-      messages:
-        invalid_collection: Invalid Collection
-        document_not_found: Document not found
-        mixed_relations: Mixed relations
-        validations: validations
-        calling_document_find_with_nil_is_invalid: Calling document find with nil
-          is invalid

@@ -1,14 +1,14 @@
 development:
-  host: localhost
+  host: <%= ENV['MONGOID_HOST'] %>
   database: always_resolve_development
 
 test:
-  host: localhost
+  host: <%= ENV['MONGOID_HOST'] %>
   database: always_resolve_test
 
 # set these environment variables on your prod server
 production:
-  host: 151.1.163.133
+  host: <%= ENV['MONGOID_HOST'] %>
   database: always_resolve_prod
   #host: <%= ENV['MONGOID_HOST'] %>
   #port: <%= ENV['MONGOID_PORT'] %>

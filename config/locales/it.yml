@@ -1,9 +1,35 @@
 it:
   always_resolve:
+    aboutus: Chi siamo
+    edit_record: Modifica record
+    english: Inglese
+    home: Inizio
+    italian: Italiano
+    language: Lingua
+    login: Entra
+    services: Servizi
+    sign_up: Nuovo Utente
+    didnt_receive_confirmation_instructions: Non ho ricevuto le istruzioni di conferma
+    email: Email
+    forgot_your_password: Password dimenticata?
+    password: Password
+    rememberme: Ricordami
+    actions: Azioni
+    activated: Attivato
     address: Indirizzo
+    admin_menu: Menu admin
+    amount: Costo
+    and: e
     are_you_sure: Sei sicuro?
+    associated_domain: Dominio associato
+    at_the_moment_there_are: In questo momento sono attivi
+    at_the_moment_you_have: In questo momento hai
     back: Indietro
+    billing_amount: Costo servizio
+    billing_frequency: Frequenza pagamento
+    buy_service: Compra un servizio
     cancel_my_account: Cancella il mio account
+    ccv: CCV
     cf: Codice Fiscale
     change_my_password: Cambia la password
     change_your_password: Cambio password
@@ -12,44 +38,90 @@ it:
     confirm_new_password: Conferma nuova password
     confirmation_instructions: Istruzioni per la conferma
     country: Provincia
+    credit_card_type: Tipo Carta di Credito
     current_password: Password corrente
-    didnt_receive_confirmation_instructions: Non ho ricevuto le istruzioni di conferma
+    delete: Cancella
+    destination: Destinazione
+    details: Dettagli
+    domain: Dominio
+    domain_create_success: Dominio creato correttamente
+    domain_delete_success: Dominio cancellato correttamente
+    domains: Domini
     edit: Modifica
     edit_account: Modifica utente
-    email: Email
-    english: Inglese
+    error:
+      bind_port: Il server non risponde
+      dns_not_authoritative: DNS non autoritativo
+      dns_not_found: Server DNS non trovato
+      not_correct_destination_type: server di destinazione non corretto
+    every: Ogni
+    expire: Scadenza
     farm: Azienda
     fax: Fax
     firstname: Nome
-    forgot_your_password: Password dimenticata?
     hello: Salve
-    home: Inizio
     if_you_didnt_request_this_please_ignore_this_email: Se non hai richiesto il cambio,
       prego ignorare questa email
-    italian: Italiano
-    language: Lingua
+    last_login: Ultimo Accesso
+    last_payment: Ultimo pagamento
+    lastname: Cognome
     leave_blank_if_you_dont_want_to_change_it: Lascia in bianco se non la vuoi cambiare
-    login: Entra
     logout: Esci
+    name: Nome
+    new_cluster: Nuovo cluster
+    new_domain: Nuovo dominio
+    new_domain_help: inserisci il nome del nuovo dominio e del tld
     new_password: Nuova password
-    password: Password
+    new_record: ! 'Nuovo record:'
+    new_service: Nuovo Servizio
+    new_service_help: Acquista un nuovo Servizio
+    new_service_type: Tipo servizio
+    next: prossimo
+    next_payment: Prossimo pagamento
+    nome: Nome
+    not_assciated: Non associato
+    number: Numero carta
     password_confirmation: Conferma password
     phone: Telefono
-    rememberme: Ricordami
+    port: Porta
+    priority: Priorità
+    record_create_success: Record aggiunto con successo
+    record_delete_success: Record cancellato correttamente
     resend_confirmation_instructions: Reinvia istruzioni per la conferma
     reset_password_instructions: Istruzioni per il cambio della password
+    rtype: Tipo record
     secondname: Cognome
     send_me_reset_password_instructions: Inviami le istruzioni per recuperare la password
-    sign_up: Nuovo Utente
+    service: Servizio
+    service1: DynDNS
+    service2: Cluster Base
+    service3: Cluster Pro
+    service4: GeoCluster
+    service_create_success: Servizio creato correttamente
+    service_delete_success: Servizio cancellato correttamente
+    service_description: Descrizione Servizio
+    service_type: Tipo Servizio
+    show: Dettagli
+    show_domains: Elenco domini
+    show_services: Elenco servizi
+    show_users: Elenco utenti
     someone_has_requested_a_link_to_change_your_password_and_you_can_do_this_through_the_link_below: Qualcuno
       ha richiesto un link per cambiare la password, lo puoi fare attraverso il link
       qui sotto
     state: Stato
+    submit: Invia
+    tld: tld
+    type: Tipo
     unhappy: Non soddisfatto
     update: Aggiorna
+    user_menu: Menu utente
+    user_was_successfully_updated: Utente aggiornato
+    users: Utenti
+    value: Valore
     vat: Partita IVA
     we_need_your_current_password_to_confirm_your_changes: Ci serve la tua password
       corrente per confermare i cambiamenti
+    weight: Peso
     welcome: Benvenuto
     you_can_confirm_your_account_email_through_the_link_below: Puoi confermare la
       tua email attraverso il link qui sotto
@@ -57,77 +129,6 @@ it:
       tua password non verrà cambiata finchè non entrerai al link qui sopra e ne creerai
       una di nuova
     zip: CAP
-    admin_menu: Menu admin
-    buy_service: Compra un servizio
-    show_domains: Elenco domini
-    show_services: Elenco servizi
-    show_users: Elenco utenti
-    user_menu: Menu utente
-    aboutus: Chi siamo
-    services: Servizi
-    actions: Azioni
-    users: Utenti
-    show: Dettagli
-    delete: Cancella
-    details: Dettagli
-    last_login: Ultimo Accesso
-    user_was_successfully_updated: Utente aggiornato
-    domain: Dominio
-    lastname: Cognome
-    type: Tipo
-    domains: Domini
-    name: Nome
-    service: Servizio
-    new_domain: Nuovo dominio
-    new_domain_help: inserisci il nome del nuovo dominio e del tld
-    submit: Invia
-    tld: tld
-    domain_create_success: Dominio creato correttamente
-    domain_delete_success: Dominio cancellato correttamente
-    new_service: Nuovo Servizio
-    ccv: CCV
-    credit_card_type: Tipo Carta di Credito
-    expire: Scadenza
-    new_service_help: Acquista un nuovo Servizio
-    new_service_type: Tipo servizio
-    number: Numero carta
-    service1: DynDNS
-    service2: Cluster Base
-    service3: Cluster Pro
-    service4: GeoCluster
-    service_description: Descrizione Servizio
-    activated: Attivato
-    service_create_success: Servizio creato correttamente
-    service_type: Tipo Servizio
-    and: e
-    at_the_moment_there_are: In questo momento sono attivi
-    at_the_moment_you_have: In questo momento hai
-    associated_domain: Dominio associato
-    not_assciated: Non associato
-    amount: Costo
-    billing_amount: Costo servizio
-    billing_frequency: Frequenza pagamento
-    every: Ogni
-    last_payment: Ultimo pagamento
-    next: prossimo
-    next_payment: Prossimo pagamento
-    service_delete_success: Servizio cancellato correttamente
-    value: Valore
-    new_record: ! 'Nuovo record:'
-    new_cluster: Nuovo cluster
-    rtype: Tipo record
-    destination: Destinazione
-    nome: Nome
-    priority: Priorità
-    weight: Peso
-    port: Porta
-    record_create_success: Record aggiunto con successo
-    error:
-      bind_port: Il server non risponde
-      dns_not_authoritative: DNS non autoritativo
-      dns_not_found: Server DNS non trovato
-      not_correct_destination_type: server di destinazione non corretto
-    record_delete_success: Record cancellato correttamente
   countries:
     AC: Isola di Ascensione
     AD: Andorra
@@ -160,6 +161,7 @@ it:
     BM: Bermuda
     BN: Brunei
     BO: Bolivia
+    BQ: BQ
     BR: Brasile
     BS: Bahamas
     BT: Bhutan
@@ -182,11 +184,13 @@ it:
     CP: Isola di Clipperton
     CR: Costa Rica
     CS: Serbia e Montenegro
+    CT: CT
     CU: Cuba
     CV: Capo Verde
     CX: Isola di Christmas
     CY: Cipro
     CZ: Repubblica Ceca
+    DD: DD
     DE: Germania
     DG: Diego Garcia
     DJ: Gibuti
@@ -208,6 +212,7 @@ it:
     FK: Isole Falkland
     FM: Micronesia
     FO: Isole Faroe
+    FQ: FQ
     FR: Francia
     FX: Francia metropolitanad
     GA: Gabon
@@ -250,6 +255,7 @@ it:
     JM: Giamaica
     JO: Giordania
     JP: Giappone
+    JT: JT
     KE: Kenya
     KG: Kirghizistan
     KH: Cambogia
@@ -279,6 +285,7 @@ it:
     MF: MF
     MG: Madagascar
     MH: Isole Marshall
+    MI: MI
     MK: Repubblica di Macedonia
     ML: Mali
     MM: Myanmar
@@ -304,11 +311,14 @@ it:
     NL: Paesi Bassi
     'NO': Norvegia
     NP: Nepal
+    NQ: NQ
     NR: Nauru
+    NT: NT
     NU: Niue
     NZ: Nuova Zelanda
     OM: Oman
     PA: Panama
+    PC: PC
     PE: Perù
     PF: Polinesia Francese
     PG: Papua Nuova Guinea
@@ -320,8 +330,10 @@ it:
     PR: Portorico
     PS: Territori palestinesi
     PT: Portogallo
+    PU: PU
     PW: Palau
     PY: Paraguay
+    PZ: PZ
     QA: Qatar
     QO: Oceania lontanaR087
     RE: Réunion
@@ -345,6 +357,7 @@ it:
     SO: Somalia
     SR: Suriname
     ST: Sao Tomé e Príncipe
+    SU: SU
     SV: El Salvador
     SY: Siria
     SZ: Swaziland
@@ -373,34 +386,22 @@ it:
     UZ: Uzbekistan
     VA: Vaticano
     VC: Saint Vincent e Grenadines
+    VD: VD
     VE: Venezuela
     VG: Isole Vergini Britanniche
     VI: Isole Vergini Americane
     VN: Vietnam
     VU: Vanuatu
     WF: Wallis e Futuna
+    WK: WK
     WS: Samoa
+    YD: Yemen
     YE: Yemen
     YT: Mayotte
     ZA: Sudafrica
     ZM: Zambia
     ZW: Zimbabwe
     ZZ: regione non valida o sconosciuta
-    BQ: BQ
-    CT: CT
-    DD: DD
-    FQ: FQ
-    JT: JT
-    MI: MI
-    NQ: NQ
-    NT: NT
-    PC: PC
-    PU: PU
-    PZ: PZ
-    SU: SU
-    VD: VD
-    WK: WK
-    YD: Yemen
   date:
     abbr_day_names:
     - Dom
@@ -411,11 +412,7 @@ it:
     - Ven
     - Sab
     abbr_month_names:
-    - !ruby/object:Syck::PrivateType
-      type_id: 'null'
-      value: !str
-        str: ''
-        taguri: x-private:null
+    - 
     - Gen
     - Feb
     - Mar
@@ -441,11 +438,7 @@ it:
       long: ! '%d %B %Y'
       short: ! '%d %b'
     month_names:
-    - !ruby/object:Syck::PrivateType
-      type_id: 'null'
-      value: !str
-        str: ''
-        taguri: x-private:null
+    - 
     - Gennaio
     - Febbraio
     - Marzo
@@ -613,6 +606,15 @@ it:
       create: Crea %{model}
       submit: Invia %{model}
       update: Aggiorna %{model}
+  mongoid:
+    errors:
+      messages:
+        calling_document_find_with_nil_is_invalid: Calling document find with nil
+          is invalid
+        document_not_found: File non trovato
+        invalid_collection: Invalid Collection
+        mixed_relations: Mixed relations
+        validations: controlli
   number:
     currency:
       format:
@@ -678,12 +680,3 @@ it:
       last: Fine
       next: Prossimo
       previous: Precedente
-  mongoid:
-    errors:
-      messages:
-        invalid_collection: Invalid Collection
-        document_not_found: File non trovato
-        mixed_relations: Mixed relations
-        validations: controlli
-        calling_document_find_with_nil_is_invalid: Calling document find with nil
-          is invalid
